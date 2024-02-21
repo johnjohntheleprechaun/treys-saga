@@ -3,61 +3,58 @@ let perspectives = [];
  * @type {ComicNode}
  */
 let focused;
+/**
+ * @type {Character[]}
+ */
+let characters = [];
+
+const nodeSize = 80;
+const padding = 20;
+
 window.addEventListener("load", () => {
     console.log("hello world");
-    const testChar = new Character(
-        "https://placekitten.com/400/400",
-        [["https://placekitten.com/300/300"], ["https://placekitten.com/300/300"], ["https://placekitten.com/300/300"]]
-    );
-    document.body.appendChild(testChar);
-    testChar.moveTo(0, 0);
-    testChar.focusNode();
-});
-//window.addEventListener("resize", displayCircle);
-
-
-function growToCenter(childIndex) {
-    console.log(`child ${childIndex} clicked`);
-    // calculate center pos of div
-    const container = document.getElementById("circle-container");
-    const bounds = container.getBoundingClientRect();
-    const centerX = bounds.x + bounds.width / 2;
-    const centerY = bounds.y + bounds.height / 2;
+    populate(20, 3);
+    // calculate how many per circumference
     
-    // animate selected child
-    const selected = container.children.item(childIndex);
-    selected.style.zIndex = "1";
-    selected.animate(
-        {
-            left: [ selected.style.left, `${bounds.x}px` ],
-            top: [ selected.style.top, `${bounds.y}px` ],
-            width: [ selected.style.width, `${bounds.width}px` ],
-            height: [ selected.style.height, `${bounds.height}px` ],
-            borderRadius: [ "100%", "0%" ],
-            justifyContent: [ "space-around", "space-around" ]
-        },
-        { duration: 1000, fill: "forwards"}
-    )
+    for (const character of characters) {
+        document.body.appendChild(character);
+    }
+    console.log(characters);
+    const levels = populateLevels();
+    for (const level of levels) {
+        displayCircle(level.slice(1), level[0]);
+    }
+});
+
+function populateLevels() {
+    let r = nodeSize + padding; // current radius to be filled
+    let i = 1; // current character being placed
+    const levels = [[0, characters[0]]];
+    while (i < characters.length) {
+        let c = 2 * Math.PI * r; // circumference
+        levels.push([r]);
+        // figure out how many can fit
+        const maxCount = Math.floor(c / (nodeSize / 2 + padding * Math.PI));
+        console.log(maxCount, i)
+        // add as many as can fit
+        for (let j = 0; j < maxCount && i + j < characters.length; j++) {
+            levels[levels.length-1].push(characters[i + j]);
+        }
+        i += maxCount;
+        r += nodeSize + padding;
+
+        console.log(levels, r, i);
+    }
+    console.log(levels);
+    return levels;
 }
 
-function placeRelative(a, b, x, y) {
-    const bounds = b.getBoundingClientRect();
-    const relX = bounds.x + (bounds.width / 2);
-    const relY = bounds.y + (bounds.height / 2);
-    //console.log(bounds, relX, relY);
-    placeCentered(a, relX + x, relY + y);
-}
-
-function placeCentered(element, x, y) {
-    placeElement(
-        element,
-        x - (element.offsetWidth / 2),
-        y - (element.offsetHeight / 2)
-    )
-}
-
-function placeElement(element, x, y) {
-    element.style.position = "absolute";
-    element.style.left = `${x}px`;
-    element.style.top = `${y}px`;
+function populate(charCount, comicCount) {
+    for (let i = 0; i < charCount; i++) {
+        const comics = [];
+        for (let j = 0; j < comicCount; j++) {
+            comics.push(["https://placekitten.com/300/300", "https://placekitten.com/300/300", "https://placekitten.com/300/300"]);
+        }
+        characters.push(new Character("https://placekitten.com/500/500", comics));
+    }
 }
