@@ -1,14 +1,21 @@
-let perspectives = [];
 /**
+ * The currently focused node.
  * @type {ComicNode}
  */
 let focused;
 /**
+ * A list of all the characters.
  * @type {Character[]}
  */
 let characters = [];
 
+/**
+ * The default size of nodes.
+ */
 const nodeSize = 80;
+/**
+ * The padding between nodes.
+ */
 const padding = 20;
 let comicDB;
 let characterDB;
@@ -64,7 +71,7 @@ async function populate() {
 }
 
 /**
- * This is neccessary because scripts inserted with either innerHTML or cloneNode will not be executed. security bs... smh
+ * Create an element with an actually usable script. This is neccessary because scripts inserted with either innerHTML or cloneNode will not be executed. security bs... smh
  * @param {string} htmlContent 
  * @returns {HTMLDivElement}
  */
