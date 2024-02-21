@@ -35,14 +35,12 @@ class Comic extends ComicNode { // A Tree
      * 
      * @param {string[]} frames A list of image links that are the comic frames
      */
-    constructor (frames) {
+    constructor (uuid) {
         super();
         this.classList.add("comic");
-        for (const frame of frames) {
-            const frameElement = document.createElement("img");
-            frameElement.src = frame;
-            this.appendChild(frameElement);
-        }
+        this.embedElement = createUsableEmbed(comicDB[uuid].embedCode);
+        this.embedElement.style.display = "none";
+        this.appendChild(this.embedElement);
     }
     focusNode() {
         if (super.focusNode()) {
@@ -57,7 +55,7 @@ class Character extends ComicNode {
     /**
      * 
      * @param {string} pfp a url of the characters display image
-     * @param {string[][]} comics a list of comic definititions. each comic def is a list of urls
+     * @param {string[]} comics a list of comic uuids
      */
     constructor (pfp, comics) {
         super();
@@ -65,7 +63,6 @@ class Character extends ComicNode {
         this.comics = comics;
         pfpElement.src = pfp;
         this.appendChild(pfpElement);
-        this.comicElements = [];
         this.hidden = false;
     }
 

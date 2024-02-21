@@ -11,7 +11,9 @@ body {
     background-color: black;
     overflow: hidden;
 }
-
+.test {
+    overflow: hidden;
+}
 .comic-node {
     width: 80px;
     height: 80px;
@@ -22,18 +24,7 @@ body {
 }
 .comic {
     border: 5px solid green;
-}
-#circle-container {
-    width: 500px;
-    height: 500px;
-    background-color: black;
-}
-.circumference-obj {
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: grey;
+    overflow: hidden;
 }
 img {
     width: 100%;

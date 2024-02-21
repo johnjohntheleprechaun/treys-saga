@@ -10,14 +10,16 @@ let characters = [];
 
 const nodeSize = 80;
 const padding = 20;
+let comicDB;
+let characterDB;
 let levels = []
 
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
     console.log("hello world");
-    populate(50, 3);
-    // calculate how many per circumference
+    await populate();
     
     for (const character of characters) {
+        console.log("character:", character);
         document.body.appendChild(character);
     }
     console.log(characters);
@@ -50,12 +52,34 @@ function populateLevels() {
     return levels;
 }
 
-function populate(charCount, comicCount) {
-    for (let i = 0; i < charCount; i++) {
-        const comics = [];
-        for (let j = 0; j < comicCount; j++) {
-            comics.push(["https://placekitten.com/300/300", "https://placekitten.com/300/300", "https://placekitten.com/300/300"]);
-        }
-        characters.push(new Character("https://placekitten.com/500/500", comics));
+async function populate() {
+    comicDB = await fetch("comics.json").then(a=>a.json());
+    characterDB = await fetch("characters.json").then(a=>a.json());
+    console.log(comicDB);
+    console.log(characterDB);
+    for (const charTemplate of characterDB) {
+        const character = new Character(charTemplate.pfp, charTemplate.comics);
+        characters.push(character);
     }
+    //document.body.innerHTML = comicDB["fb9e408e-3771-4d3a-b042-ebde2d14aaad"].embedCode;
+}
+
+/**
+ * This is neccessary because scripts inserted with either innerHTML or cloneNode will not be executed. security bs... smh
+ * @param {string} htmlContent 
+ * @returns {HTMLDivElement}
+ */
+function createUsableEmbed(htmlContent) {
+    const baseDiv = document.createElement("div");
+    baseDiv.classList.add("test");
+    baseDiv.innerHTML = htmlContent;
+    // copy script properties
+    const scriptChild = baseDiv.querySelector("script");
+    const script = document.createElement("script");
+    for (const attribute of scriptChild.attributes) {
+        script.setAttribute(attribute.name, attribute.value);
+    }
+    scriptChild.remove();
+    baseDiv.appendChild(script);
+    return baseDiv;s
 }
