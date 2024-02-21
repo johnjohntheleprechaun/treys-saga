@@ -1,3 +1,6 @@
+/**
+ * This is the base node class, it contains functions like focusing, movement, etc.
+ */
 class ComicNode extends HTMLDivElement {
     constructor () {
         super();
@@ -7,9 +10,19 @@ class ComicNode extends HTMLDivElement {
         resizeObserver.observe(this);
     }
 
+    /**
+     * Move a node to a position. Will later contain the animation code.
+     * @param {number} x the x position, in pixels
+     * @param {number} y the y position, in pixels
+     */
     moveTo(x, y) {
         this.setPos(x, y);
     }
+    /**
+     * Set a nodes position. No animation.
+     * @param {number} x the x position, in pixels
+     * @param {number} y the y position, in pixels
+     */
     setPos(x, y) {
         const bounds = this.parentElement.getBoundingClientRect();
         this.style.position = "absolute";
@@ -17,9 +30,15 @@ class ComicNode extends HTMLDivElement {
         this.style.top = `${y + (bounds.height / 2) - (this.offsetHeight / 2)}px`;
         this.targetPos = [x, y];
     }
+    /**
+     * Re-adjust the node position, like after the element has changed size.
+     */
     adjustPos() {
         this.moveTo(this.targetPos[0], this.targetPos[1]);
     }
+    /**
+     * Toggle whether the node is focused or not.
+     */
     toggleFocus() {
         if (focused === this) {
             this.unfocusNode();
@@ -27,6 +46,10 @@ class ComicNode extends HTMLDivElement {
             this.focusNode();
         }
     }
+    /**
+     * Focus the node. Returns `true` if it's already focused.
+     * @returns {boolean}
+     */
     focusNode() {
         if (focused === this) {
             console.log("already focused");
@@ -41,23 +64,35 @@ class ComicNode extends HTMLDivElement {
 
         focused = this;
     }
+    /**
+     * Unfocus the node.
+     */
     unfocusNode() {
         if (focused === this) {
             focused = undefined;
         }
     }
+    /**
+     * Darken the node. Like if it's meant to be in the background.
+     */
     dim() {
         this.style.filter = "brightness(25%)";
     }
+    /**
+     * Reset brightness.
+     */
     undim() {
         this.style.filter = "";
     }
 }
 customElements.define("comic-node", ComicNode, { extends: "div" });
+/**
+ * A comic. When focused it will open the embedded reddit post
+ */
 class Comic extends ComicNode { // A Tree
     /**
-     * 
-     * @param {string[]} frames A list of image links that are the comic frames
+     * Set class list, the display pfp, and create the element for the embedded reddit post
+     * @param {string} uuid The uuid of the comic
      */
     constructor (uuid) {
         super();
@@ -71,6 +106,9 @@ class Comic extends ComicNode { // A Tree
         this.embedElement.style.display = "none";
         this.appendChild(this.embedElement);
     }
+    /**
+     * Open the embedded reddit post
+     */
     focusNode() {
         if (super.focusNode()) {
             return; // already focused
@@ -85,9 +123,12 @@ class Comic extends ComicNode { // A Tree
     }
 }
 customElements.define("comic-element", Comic, { extends: "div" });
+
+/**
+ * A character Node. When focused it will display all of it's related comic nodes.
+ */
 class Character extends ComicNode {
     /**
-     * 
      * @param {string} pfp a url of the characters display image
      * @param {string[]} comics a list of comic uuids
      */
@@ -100,6 +141,9 @@ class Character extends ComicNode {
         this.hidden = false;
     }
 
+    /**
+     * Unfocus all the other character nodes and spawn the related comic nodes.
+     */
     focusNode() {
         if (super.focusNode()) {
             return; // already focused
@@ -121,7 +165,9 @@ class Character extends ComicNode {
         // position comics
         displayCircle(this.comicElements, 150, this);
     }
-
+    /**
+     * Unfocus this element, and undim all the other character nodes.
+     */
     unfocusNode() {
         super.unfocusNode();
         if (!this.comicElements) {
@@ -135,7 +181,7 @@ class Character extends ComicNode {
 customElements.define("character-element", Character, { extends: "div" });
 
 /**
- * 
+ * Display the nodes evenly in a circle. Optionally around a center node.
  * @param {ComicNode[]} nodes a list of nodes to set positions for
  * @param {number} radius the radius
  */
