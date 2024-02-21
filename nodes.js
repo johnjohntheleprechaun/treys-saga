@@ -1,6 +1,6 @@
 class ComicNode extends HTMLDivElement {
     constructor () {
-        super(document.createElement("div"));
+        super();
         this.classList.add("comic-node");
         this.addEventListener("click", this.focusNode);
     }
@@ -66,6 +66,7 @@ class Character extends ComicNode {
         pfpElement.src = pfp;
         this.appendChild(pfpElement);
         this.comicElements = [];
+        this.hidden = false;
     }
 
     focusNode() {
@@ -73,6 +74,13 @@ class Character extends ComicNode {
             return; // already focused
         }
         console.log("focus character");
+        // ensure all other chars are hidden
+        for (const character of characters) {
+            if (character !== this) {
+                character.hide();
+            }
+        }
+
         // move character image to the center
         this.moveTo(0, 0);
 
@@ -92,6 +100,9 @@ class Character extends ComicNode {
         for (const comic of this.comicElements) {
             comic.remove();
         }
+    }
+    hide() {
+        return; 
     }
 }
 customElements.define("character-element", Character, { extends: "div" });

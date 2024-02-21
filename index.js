@@ -10,17 +10,18 @@ let characters = [];
 
 const nodeSize = 80;
 const padding = 20;
+let levels = []
 
 window.addEventListener("load", () => {
     console.log("hello world");
-    populate(20, 3);
+    populate(50, 3);
     // calculate how many per circumference
     
     for (const character of characters) {
         document.body.appendChild(character);
     }
     console.log(characters);
-    const levels = populateLevels();
+    levels = populateLevels();
     for (const level of levels) {
         displayCircle(level.slice(1), level[0]);
     }
