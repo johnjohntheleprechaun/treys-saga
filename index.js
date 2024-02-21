@@ -20,10 +20,8 @@ window.addEventListener("load", async () => {
     await populate();
     
     for (const character of characters) {
-        console.log("character:", character);
         document.body.appendChild(character);
     }
-    console.log(characters);
     levels = populateLevels();
     for (const level of levels) {
         displayCircle(level.slice(1), level[0]);
@@ -32,7 +30,6 @@ window.addEventListener("load", async () => {
 
 function adjustElementPos(entries) {
     for (const entry of entries) {
-        console.log(entry);
         entry.target.adjustPos();
     }
 }
@@ -46,25 +43,19 @@ function populateLevels() {
         levels.push([r]);
         // figure out how many can fit
         const maxCount = Math.floor(c / (nodeSize / 2 + padding * Math.PI));
-        console.log(maxCount, i)
         // add as many as can fit
         for (let j = 0; j < maxCount && i + j < characters.length; j++) {
             levels[levels.length-1].push(characters[i + j]);
         }
         i += maxCount;
         r += nodeSize + padding;
-
-        console.log(levels, r, i);
     }
-    console.log(levels);
     return levels;
 }
 
 async function populate() {
     comicDB = await fetch("comics.json").then(a=>a.json());
     characterDB = await fetch("characters.json").then(a=>a.json());
-    console.log(comicDB);
-    console.log(characterDB);
     for (const charTemplate of characterDB) {
         const character = new Character(charTemplate.pfp, charTemplate.comics);
         characters.push(character);

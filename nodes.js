@@ -17,6 +17,9 @@ class ComicNode extends HTMLDivElement {
         this.style.top = `${y + (bounds.height / 2) - (this.offsetHeight / 2)}px`;
         this.targetPos = [x, y];
     }
+    adjustPos() {
+        this.moveTo(this.targetPos[0], this.targetPos[1]);
+    }
     toggleFocus() {
         if (focused === this) {
             this.unfocusNode();
@@ -26,6 +29,7 @@ class ComicNode extends HTMLDivElement {
     }
     focusNode() {
         if (focused === this) {
+            console.log("already focused");
             return true; // already focused
         }
         else if (focused) {
@@ -36,14 +40,17 @@ class ComicNode extends HTMLDivElement {
         }
 
         focused = this;
-        console.log("focused node")
     }
     unfocusNode() {
+        if (focused === this) {
+            focused = undefined;
+        }
+    }
+    dim() {
         this.style.filter = "brightness(25%)";
     }
-    adjustPos() {
-        console.log(this.targetPos);
-        this.moveTo(this.targetPos[0], this.targetPos[1]);
+    undim() {
+        this.style.filter = "";
     }
 }
 customElements.define("comic-node", ComicNode, { extends: "div" });
@@ -68,7 +75,6 @@ class Comic extends ComicNode { // A Tree
         if (super.focusNode()) {
             return; // already focused
         }
-        console.log("focus comic");
         this.children.item(0).style.display = "none"; // hide pfp
         
         this.style.width = "fit-content";
@@ -98,7 +104,6 @@ class Character extends ComicNode {
         if (super.focusNode()) {
             return; // already focused
         }
-        console.log("focus character");
         // ensure all other chars are hidden
         for (const character of characters) {
             if (character !== this) {
@@ -110,7 +115,6 @@ class Character extends ComicNode {
         this.comicElements = [];
         for (const comic of this.comics) {
             const comicElement = new Comic(comic);
-            console.log(comic, comicElement);
             this.parentElement.appendChild(comicElement);
             this.comicElements.push(comicElement);
         }
@@ -120,7 +124,6 @@ class Character extends ComicNode {
 
     unfocusNode() {
         super.unfocusNode();
-        console.log("UNFOCUS");
         if (!this.comicElements) {
             return; // wasn't displaying comic nodes
         }
