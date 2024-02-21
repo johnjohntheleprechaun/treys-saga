@@ -8,6 +8,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
+}
+
+.comic-node {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 5px solid red;
+}
+.comic {
+    border: 5px solid green;
 }
 #circle-container {
     width: 500px;
@@ -15,21 +27,13 @@ body {
     background-color: black;
 }
 .circumference-obj {
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-    overflow: hidden;
+    
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
     background-color: grey;
 }
 img {
     width: 80px;
     height: 80px;
 }
-/*.circumference-obj:hover {
-    width: 70px;
-    height: 70px;
-    transform: translate(-5px, -5px);
-} */

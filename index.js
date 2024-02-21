@@ -1,28 +1,20 @@
 let perspectives = [];
+/**
+ * @type {ComicNode}
+ */
+let focused;
 window.addEventListener("load", () => {
     console.log("hello world");
-    displayCircle();
+    const testChar = new Character(
+        "https://placekitten.com/400/400",
+        [["https://placekitten.com/300/300"], ["https://placekitten.com/300/300"], ["https://placekitten.com/300/300"]]
+    );
+    document.body.appendChild(testChar);
+    testChar.moveTo(0, 0);
+    testChar.focusNode();
 });
-window.addEventListener("resize", displayCircle);
+//window.addEventListener("resize", displayCircle);
 
-function displayCircle() {
-    const circleContainer = document.getElementById("circle-container");
-    const spacing = (2 * Math.PI) / (circleContainer.childElementCount - 1);
-    const radius = circleContainer.clientWidth / 2 - circleContainer.children.item(0).offsetWidth / 2 - 40;
-    // position first child
-    const first = circleContainer.children.item(0);
-    first.addEventListener("click", () => growToCenter(0));
-    placeRelative(first, circleContainer, 0, 0);
-
-    for (let i = 1; i < circleContainer.childElementCount; i++) {
-        const child = circleContainer.children.item(i);
-        child.addEventListener("click", () => growToCenter(i));
-        // set child position to a point around the circle
-        const xPos = Math.cos(spacing * i-1) * radius;
-        const yPos = Math.sin(spacing * i-1) * radius;
-        placeRelative(child, circleContainer, xPos, yPos);
-    }
-}
 
 function growToCenter(childIndex) {
     console.log(`child ${childIndex} clicked`);
@@ -41,9 +33,10 @@ function growToCenter(childIndex) {
             top: [ selected.style.top, `${bounds.y}px` ],
             width: [ selected.style.width, `${bounds.width}px` ],
             height: [ selected.style.height, `${bounds.height}px` ],
-            borderRadius: [ "100%", "0%" ]
+            borderRadius: [ "100%", "0%" ],
+            justifyContent: [ "space-around", "space-around" ]
         },
-        { duration: 50, fill: "forwards"}
+        { duration: 1000, fill: "forwards"}
     )
 }
 
