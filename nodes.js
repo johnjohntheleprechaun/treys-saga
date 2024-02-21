@@ -152,6 +152,7 @@ class Character extends ComicNode {
         for (const character of characters) {
             if (character !== this) {
                 character.unfocusNode();
+                character.dim();
             }
         }
 
@@ -170,6 +171,9 @@ class Character extends ComicNode {
      */
     unfocusNode() {
         super.unfocusNode();
+        for (const character of characters) {
+            character.undim();
+        }
         if (!this.comicElements) {
             return; // wasn't displaying comic nodes
         }
