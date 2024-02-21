@@ -96,7 +96,10 @@ function createUsableEmbed(htmlContent) {
     for (const attribute of scriptChild.attributes) {
         script.setAttribute(attribute.name, attribute.value);
     }
+    // enforce dark mode
+    const quoteChild = baseDiv.querySelector("blockquote");
+    quoteChild.setAttribute("data-embed-theme", "dark");
     scriptChild.remove();
     baseDiv.appendChild(script);
-    return baseDiv;s
+    return baseDiv;
 }
