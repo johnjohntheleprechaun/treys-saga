@@ -12,7 +12,8 @@ const nodeSize = 80;
 const padding = 20;
 let comicDB;
 let characterDB;
-let levels = []
+let levels = [];
+let resizeObserver = new ResizeObserver(adjustElementPos);
 
 window.addEventListener("load", async () => {
     console.log("hello world");
@@ -28,6 +29,13 @@ window.addEventListener("load", async () => {
         displayCircle(level.slice(1), level[0]);
     }
 });
+
+function adjustElementPos(entries) {
+    for (const entry of entries) {
+        console.log(entry);
+        entry.target.adjustPos();
+    }
+}
 
 function populateLevels() {
     let r = nodeSize + padding; // current radius to be filled

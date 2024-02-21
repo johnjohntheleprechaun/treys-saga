@@ -2,14 +2,27 @@ class ComicNode extends HTMLDivElement {
     constructor () {
         super();
         this.classList.add("comic-node");
-        this.addEventListener("click", this.focusNode);
+        this.addEventListener("click", this.toggleFocus);
+        this.targetPos = [0,0];
+        resizeObserver.observe(this);
     }
 
     moveTo(x, y) {
+        this.setPos(x, y);
+    }
+    setPos(x, y) {
         const bounds = this.parentElement.getBoundingClientRect();
         this.style.position = "absolute";
         this.style.left = `${x + (bounds.width / 2) - (this.offsetWidth / 2)}px`;
         this.style.top = `${y + (bounds.height / 2) - (this.offsetHeight / 2)}px`;
+        this.targetPos = [x, y];
+    }
+    toggleFocus() {
+        if (focused === this) {
+            this.unfocusNode();
+        } else {
+            this.focusNode();
+        }
     }
     focusNode() {
         if (focused === this) {
@@ -26,7 +39,11 @@ class ComicNode extends HTMLDivElement {
         console.log("focused node")
     }
     unfocusNode() {
-
+        this.style.filter = "brightness(25%)";
+    }
+    adjustPos() {
+        console.log(this.targetPos);
+        this.moveTo(this.targetPos[0], this.targetPos[1]);
     }
 }
 customElements.define("comic-node", ComicNode, { extends: "div" });
@@ -38,6 +55,11 @@ class Comic extends ComicNode { // A Tree
     constructor (uuid) {
         super();
         this.classList.add("comic");
+        // placeholder pfp
+        const image = document.createElement("img");
+        image.src = "https://placekitten.com/400/400";
+        this.appendChild(image);
+
         this.embedElement = createUsableEmbed(comicDB[uuid].embedCode);
         this.embedElement.style.display = "none";
         this.appendChild(this.embedElement);
@@ -47,7 +69,13 @@ class Comic extends ComicNode { // A Tree
             return; // already focused
         }
         console.log("focus comic");
-        this.moveTo(0, 0);
+        this.children.item(0).style.display = "none"; // hide pfp
+        
+        this.style.width = "fit-content";
+        this.style.height = "fit-content";
+        this.style.borderRadius = "0px";
+        this.embedElement.style.display = "block";
+        //this.moveTo(0, 0);
     }
 }
 customElements.define("comic-element", Comic, { extends: "div" });
@@ -74,12 +102,9 @@ class Character extends ComicNode {
         // ensure all other chars are hidden
         for (const character of characters) {
             if (character !== this) {
-                character.hide();
+                character.unfocusNode();
             }
         }
-
-        // move character image to the center
-        this.moveTo(0, 0);
 
         // spawn comics for the character
         this.comicElements = [];
@@ -90,16 +115,18 @@ class Character extends ComicNode {
             this.comicElements.push(comicElement);
         }
         // position comics
-        displayCircle(this.comicElements, 200);
+        displayCircle(this.comicElements, 150, this);
     }
 
     unfocusNode() {
+        super.unfocusNode();
+        console.log("UNFOCUS");
+        if (!this.comicElements) {
+            return; // wasn't displaying comic nodes
+        }
         for (const comic of this.comicElements) {
             comic.remove();
         }
-    }
-    hide() {
-        return; 
     }
 }
 customElements.define("character-element", Character, { extends: "div" });
@@ -109,15 +136,17 @@ customElements.define("character-element", Character, { extends: "div" });
  * @param {ComicNode[]} nodes a list of nodes to set positions for
  * @param {number} radius the radius
  */
-function displayCircle(nodes, radius) {
+function displayCircle(nodes, radius, center = undefined) {
     const spacing = (2 * Math.PI) / nodes.length;
+    const offsetX = center ? center.targetPos[0] : 0;
+    const offsetY = center ? center.targetPos[1] : 0;
 
     for (let i = 0; i < nodes.length; i++) {
         const child = nodes[i];
 
         // set child position to a point around the circle
-        const xPos = Math.cos(spacing * i) * radius;
-        const yPos = Math.sin(spacing * i) * radius;
+        const xPos = Math.cos(spacing * i) * radius + offsetX;
+        const yPos = Math.sin(spacing * i) * radius + offsetY;
         child.moveTo(xPos, yPos);
     }
 }
