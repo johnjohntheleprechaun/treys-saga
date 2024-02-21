@@ -24,6 +24,11 @@ let resizeObserver = new ResizeObserver(adjustElementPos);
 
 window.addEventListener("load", async () => {
     console.log("hello world");
+    document.body.addEventListener("click", event => {
+        if (event.target === document.body) {
+            unfocusAll();
+        }
+    });
     await populate();
     
     for (const character of characters) {
@@ -34,6 +39,12 @@ window.addEventListener("load", async () => {
         displayCircle(level.slice(1), level[0]);
     }
 });
+
+function unfocusAll() {
+    for (const character of characters) {
+        character.unfocusNode();
+    }
+}
 
 function adjustElementPos(entries) {
     for (const entry of entries) {
