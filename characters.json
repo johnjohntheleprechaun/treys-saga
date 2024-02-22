@@ -1,14 +1,14 @@
 [
     {
         "name": "Trey",
-        "pfp": "https://placekitten.com/300/300",
+        "pfp": "/pfp/trey.webp",
         "comics": [
             "8016ce79-fbd0-44cd-9965-1616e9340e00"
         ]
     },
     {
         "name": "Tress",
-        "pfp": "https://placekitten.com/500/500",
+        "pfp": "/pfp/tress.webp",
         "comics": [
             "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f"
         ]
