@@ -47,9 +47,13 @@ class ComicNode extends HTMLDivElement {
      */
     setPos(x, y) {
         const bounds = this.parentElement.getBoundingClientRect();
+        console.log(bounds)
         this.style.position = "absolute";
-        this.style.left = `${x + (bounds.width / 2) - (this.offsetWidth / 2)}px`;
-        this.style.top = `${y + (bounds.height / 2) - (this.offsetHeight / 2)}px`;
+        const newX = x + (bounds.width / 2) - (this.offsetWidth / 2);
+        const newY = y + (bounds.height / 2) - (this.offsetHeight / 2);
+        console.log(scale);
+        this.style.left = `${newX}px`;
+        this.style.top = `${newY}px`;
         this.targetPos = [x, y];
     }
     setOffset(x, y) {
@@ -61,8 +65,8 @@ class ComicNode extends HTMLDivElement {
      */
     adjustPos() {
         this.setPos(
-            (this.targetPos[0] + this.offset[0]),
-            (this.targetPos[1] + this.offset[1])
+            (this.targetPos[0] + this.offset[0] / scale),
+            (this.targetPos[1] + this.offset[1] / scale)
         );
     }
     /**
