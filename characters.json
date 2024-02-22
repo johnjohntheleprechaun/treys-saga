@@ -17,5 +17,13 @@
         "comics": [
             "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f"
         ]
+    },
+    {
+        "name": "Boat",
+        "pfp": "/pfp/boat.webp",
+        "comics": [
+            "71217b1d-c4df-4da7-8583-3f099019bc4c",
+            "c2a19ef1-da53-4a1d-b7fd-b8fd48cf3dc1"
+        ]
     }
 ]
