@@ -13,11 +13,6 @@ let levels = [];
 
 window.addEventListener("load", async () => {
     console.log("hello world");
-    document.body.addEventListener("click", event => {
-        if (event.target === document.body) {
-            unfocusAll();
-        }
-    });
     await populate();
     
     for (const character of characters) {
@@ -30,6 +25,35 @@ window.addEventListener("load", async () => {
         displayCircle(level, 125*(i))
     }
 });
+
+window.addEventListener("click", event => {
+    console.log(event);
+    if (event.target === document.body || event.target === document.documentElement) {
+        console.log("hello");
+        unfocusAll();
+    }
+});
+
+let scale = 1;
+const scalingModifier = .001;
+const minScale = .05
+window.addEventListener("wheel", event => {
+    console.log(event.deltaY);
+    setScale(scale - event.deltaY * scalingModifier);
+});
+/**
+ * Set the scale for all the nodes
+ * @param {number} scale A percentage. 1 = 100%
+ */
+function setScale(newScale) {
+    if (newScale >= minScale) {
+        document.body.style.transform = `scale(${scale})`;
+        scale = newScale;
+    }
+}
+function setOffset(x, y) {
+
+}
 
 async function populate() {
     comicDB = await fetch("/comics.json").then(a=>a.json());

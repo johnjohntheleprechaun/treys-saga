@@ -133,7 +133,7 @@ class Comic extends ComicNode { // A Tree
         this.embedElement = createUsableEmbed(comicDB[this.uuid].embedCode);
         this.appendChild(this.embedElement);
         
-        this.style.width = "fit-content";
+        this.style.width = "500px";
         this.style.height = "fit-content";
         this.style.borderRadius = "20px";
         this.style.zIndex = "1";
