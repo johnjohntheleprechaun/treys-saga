@@ -1,15 +1,4 @@
 /**
- * The currently focused node.
- * @type {ComicNode}
- */
-let focused;
-/**
- * A list of all the characters.
- * @type {Character[]}
- */
-let characters = [];
-
-/**
  * The default size of nodes.
  */
 const nodeSize = 80;

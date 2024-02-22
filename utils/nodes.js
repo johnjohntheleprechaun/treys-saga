@@ -1,3 +1,20 @@
+let resizeObserver = new ResizeObserver(adjustElementPos);
+/**
+ * The currently focused node.
+ * @type {ComicNode}
+ */
+let focused;
+/**
+ * A list of all the characters.
+ * @type {Character[]}
+ */
+let characters = [];
+
+/**
+ * @type {Comic}
+ */
+let displayedComic;
+
 /**
  * This is the base node class, it contains functions like focusing, movement, etc.
  */
@@ -107,6 +124,10 @@ class Comic extends ComicNode { // A Tree
      * Open the embedded reddit post
      */
     focusNode() {
+        if (displayedComic) {
+            displayedComic.unfocusNode();
+        }
+        displayedComic = this;
         this.children.item(0).style.display = "none"; // hide pfp
 
         this.embedElement = createUsableEmbed(comicDB[this.uuid].embedCode);
@@ -117,6 +138,14 @@ class Comic extends ComicNode { // A Tree
         this.style.borderRadius = "20px";
         this.style.zIndex = "1";
         //this.moveTo(0, 0);
+    }
+    unfocusNode() {
+        this.embedElement.style.display = "none";
+        this.children.item(0).style.display = "block";
+        this.style.width = "80px";
+        this.style.height = "80px";
+        this.style.zIndex = "0";
+        this.style.borderRadius = "100%";
     }
 }
 customElements.define("comic-element", Comic, { extends: "div" });
@@ -261,5 +290,3 @@ function adjustElementPos(entries) {
         entry.target.adjustPos();
     }
 }
-
-let resizeObserver = new ResizeObserver(adjustElementPos);
