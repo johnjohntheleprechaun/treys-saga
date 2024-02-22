@@ -96,27 +96,26 @@ class Comic extends ComicNode { // A Tree
      */
     constructor (uuid) {
         super();
+        this.uuid = uuid;
         this.classList.add("comic");
         // placeholder pfp
         const image = document.createElement("img");
         image.src = "https://placekitten.com/400/400";
         this.appendChild(image);
-
-        this.embedElement = createUsableEmbed(comicDB[uuid].embedCode);
-        this.embedElement.style.display = "none";
-        this.appendChild(this.embedElement);
     }
     /**
      * Open the embedded reddit post
      */
     focusNode() {
         this.children.item(0).style.display = "none"; // hide pfp
+
+        this.embedElement = createUsableEmbed(comicDB[this.uuid].embedCode);
+        this.appendChild(this.embedElement);
         
         this.style.width = "fit-content";
         this.style.height = "fit-content";
         this.style.borderRadius = "20px";
         this.style.zIndex = "1";
-        this.embedElement.style.display = "block";
         //this.moveTo(0, 0);
     }
 }
