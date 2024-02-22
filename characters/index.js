@@ -27,15 +27,13 @@ window.addEventListener("load", async () => {
 });
 
 window.addEventListener("click", event => {
-    console.log(event);
     if (event.target === document.body || event.target === document.documentElement) {
-        console.log("hello");
         unfocusAll();
     }
 });
 
-let scale = 1;
-const scalingModifier = .001;
+
+const scalingModifier = .005;
 const minScale = .05
 window.addEventListener("wheel", event => {
     console.log(event.deltaY);
@@ -46,13 +44,32 @@ window.addEventListener("wheel", event => {
  * @param {number} scale A percentage. 1 = 100%
  */
 function setScale(newScale) {
-    if (newScale >= minScale) {
-        document.body.style.transform = `scale(${scale})`;
-        scale = newScale;
-    }
+    let targetScale = Math.max(newScale, minScale);
+    document.body.style.transform = `scale(${targetScale})`;
+    scale = targetScale;
 }
-function setOffset(x, y) {
+let mouseButton = -1;
+window.addEventListener("mousemove", event => {
+    if (mouseButton === -1) {
+        return;
+    }
+    if (event.target === document.body || event.target === document.documentElement || mouseButton === 1) {
+        setOffset(offsetX + event.movementX, offsetY + event.movementY);
+    }
+});
+window.addEventListener("mousedown", e => {
+    e.preventDefault();
+    mouseButton = e.button
+    
+});
+window.addEventListener("mouseup", _ => { mouseButton = -1 });
 
+function setOffset(x, y) {
+    for (const element of document.body.children) {
+        if (element instanceof ComicNode) {
+            element.setOffset(x, y);
+        }
+    }
 }
 
 async function populate() {

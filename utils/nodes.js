@@ -15,6 +15,10 @@ let characters = [];
  */
 let displayedComic;
 
+let scale = 1;
+let offsetX = 0;
+let offsetY = 0;
+
 /**
  * This is the base node class, it contains functions like focusing, movement, etc.
  */
@@ -24,6 +28,7 @@ class ComicNode extends HTMLDivElement {
         this.classList.add("comic-node");
         this.addEventListener("click", this.toggleFocus);
         this.targetPos = [0,0];
+        this.offset = [0, 0];
         resizeObserver.observe(this);
     }
 
@@ -47,11 +52,18 @@ class ComicNode extends HTMLDivElement {
         this.style.top = `${y + (bounds.height / 2) - (this.offsetHeight / 2)}px`;
         this.targetPos = [x, y];
     }
+    setOffset(x, y) {
+        this.offset = [x, y];
+        this.adjustPos();
+    }
     /**
      * Re-adjust the node position, like after the element has changed size.
      */
     adjustPos() {
-        this.moveTo(this.targetPos[0], this.targetPos[1]);
+        this.setPos(
+            (this.targetPos[0] + this.offset[0]),
+            (this.targetPos[1] + this.offset[1])
+        );
     }
     /**
      * Toggle whether the node is focused or not.
