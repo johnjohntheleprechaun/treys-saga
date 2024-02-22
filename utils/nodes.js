@@ -49,8 +49,8 @@ class ComicNode extends HTMLDivElement {
         const bounds = this.parentElement.getBoundingClientRect();
         console.log(bounds)
         this.style.position = "absolute";
-        const newX = x + (bounds.width / 2) - (this.offsetWidth / 2);
-        const newY = y + (bounds.height / 2) - (this.offsetHeight / 2);
+        const newX = x + (bounds.width / scale / 2) - (this.offsetWidth / 2);
+        const newY = y + (bounds.height / scale / 2) - (this.offsetHeight / 2);
         console.log(scale);
         this.style.left = `${newX}px`;
         this.style.top = `${newY}px`;
