@@ -14,19 +14,3 @@ body {
 .test {
     overflow: hidden;
 }
-.comic-node {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    border-radius: 100%;
-    overflow: hidden;
-    border: 5px solid red;
-}
-.comic {
-    border: 5px solid green;
-    overflow: hidden;
-}
-img {
-    width: 100%;
-    height: 100%;
-}
