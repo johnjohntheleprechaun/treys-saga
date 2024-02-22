@@ -49,7 +49,7 @@
 [Intreypitude](/r/comics/comments/1aw27mf/intreypitude/) 
 [SUPPLANT.](/r/comics/comments/1aw2gtm/supplant/) 
 [TREY RETURNS](/r/comics/comments/1aw2nbp/trey_returns/) 
-[TREE](https://www.reddit.com/r/comics/comments/1aw379j/tree/) 
+[TREE](/r/comics/comments/1aw379j/tree/) 
 [TRUMP](/r/comics/comments/1aw386c/trump/) 
 [TIME](/r/comics/comments/1aw3a2r/time_trey/) 
 [Purple Shirt](/r/comics/comments/1aw43i0/purple_shitt/) 
