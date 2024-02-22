@@ -6,6 +6,7 @@
     border-radius: 100%;
     overflow: hidden;
     border: 5px solid red;
+    background-color: black;
     user-select: none;
     cursor: pointer;
 }
