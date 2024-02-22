@@ -306,3 +306,50 @@ function adjustElementPos(entries) {
         entry.target.adjustPos();
     }
 }
+
+window.addEventListener("click", event => {
+    if (event.target === document.body || event.target === document.documentElement) {
+        unfocusAll();
+    }
+});
+
+
+const scalingModifier = .005;
+const minScale = .05
+window.addEventListener("wheel", event => {
+    console.log(event.deltaY);
+    setScale(scale - event.deltaY * scalingModifier);
+});
+/**
+ * Set the scale for all the nodes
+ * @param {number} scale A percentage. 1 = 100%
+ */
+function setScale(newScale) {
+    let targetScale = Math.max(newScale, minScale);
+    // scale is set with styles so that the comic embed elements will also scale properly
+    document.body.style.transform = `scale(${targetScale})`;
+    scale = targetScale;
+}
+let mouseButton = -1;
+window.addEventListener("mousemove", event => {
+    if (mouseButton === -1) {
+        return;
+    }
+    if (event.target === document.body || event.target === document.documentElement || mouseButton === 1) {
+        setOffset(offsetX + event.movementX, offsetY + event.movementY);
+    }
+});
+window.addEventListener("mousedown", e => {
+    e.preventDefault();
+    mouseButton = e.button
+    
+});
+window.addEventListener("mouseup", _ => { mouseButton = -1 });
+
+function setOffset(x, y) {
+    for (const element of document.body.children) {
+        if (element instanceof ComicNode) {
+            element.setOffset(x, y);
+        }
+    }
+}
