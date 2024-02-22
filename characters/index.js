@@ -72,8 +72,8 @@ function populateLevels() {
 }
 
 async function populate() {
-    comicDB = await fetch("comics.json").then(a=>a.json());
-    characterDB = await fetch("characters.json").then(a=>a.json());
+    comicDB = await fetch("/comics.json").then(a=>a.json());
+    characterDB = await fetch("/characters.json").then(a=>a.json());
     for (const charTemplate of characterDB) {
         const character = new Character(charTemplate.pfp, charTemplate.comics);
         characters.push(character);
