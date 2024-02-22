@@ -10,3 +10,6 @@ Databases are stored in `comics.json` and `characters.json`. You can either add 
 - Store character pfps in `/pfps`
 - Store comic thumbnails in `/thumbnails`
 - Try to avoid similar images across the pfps and thumbnails (e.g. use one boat picture for the boat's character pfp, and a different perspective of the same boat for a boat comic)
+
+### Documentation
+All code contributions should be thoroughly documented with [jsdoc](https://jsdoc.app/) annotations. I'm currently still working on documenting the code I've written. If you want to help with that, feel free to make a pull request just like any other contribution, but I'm making docs my priority for now so it's probably not necessary.
