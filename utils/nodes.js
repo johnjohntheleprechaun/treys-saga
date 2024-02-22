@@ -114,7 +114,8 @@ class Comic extends ComicNode { // A Tree
         
         this.style.width = "fit-content";
         this.style.height = "fit-content";
-        this.style.borderRadius = "0px";
+        this.style.borderRadius = "20px";
+        this.style.zIndex = "1";
         this.embedElement.style.display = "block";
         //this.moveTo(0, 0);
     }
@@ -133,7 +134,7 @@ class Character extends ComicNode {
         super();
         const pfpElement = document.createElement("img");
         this.comics = comics;
-        pfpElement.src = pfp;
+        pfpElement.src = pfp ? pfp : "https://placekitten.com/200/200";
         this.appendChild(pfpElement);
         this.hidden = false;
     }
