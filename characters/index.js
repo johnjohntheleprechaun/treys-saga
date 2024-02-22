@@ -18,7 +18,7 @@ window.addEventListener("load", async () => {
     for (const character of characters) {
         document.body.appendChild(character);
     }
-    levels = populateLevels();
+    levels = populateLevels(characters);
     for (let i = 0; i < levels.length; i++) {
         const level = levels[i];
         console.log(level);

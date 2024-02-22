@@ -273,10 +273,10 @@ function createUsableEmbed(htmlContent) {
 /**
  * populates levels based on params like increase per level
  */
-function populateLevels(levelCounts = [1, 6], levelIncrement = 6) {
+function populateLevels(nodes, levelCounts = [1, 6], levelIncrement = 6) {
     let i = 1; // current character being placed
-    const levels = [[characters[0]]];
-    while (i < characters.length) {
+    const levels = [[nodes[0]]];
+    while (i < nodes.length) {
         levels.push([]);
         // get current level count
         let levelCount;
@@ -286,8 +286,8 @@ function populateLevels(levelCounts = [1, 6], levelIncrement = 6) {
             levelCount = levelCounts[levels.length-1];
         }
         // add as many as can fit
-        for (let j = 0; j < levelCount && i + j < characters.length; j++) {
-            levels[levels.length-1].push(characters[i + j]);
+        for (let j = 0; j < levelCount && i + j < nodes.length; j++) {
+            levels[levels.length-1].push(nodes[i + j]);
         }
         i += levelCount;
     }
