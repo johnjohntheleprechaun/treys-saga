@@ -229,22 +229,25 @@ function createUsableEmbed(htmlContent) {
 /**
  * populates levels based on params like increase per level
  */
-function populateLevels() {
-    let r = nodeSize + padding; // current radius to be filled
+function populateLevels(levelCounts = [1, 6], levelIncrement = 6) {
     let i = 1; // current character being placed
-    const levels = [[0, characters[0]]];
+    const levels = [[characters[0]]];
     while (i < characters.length) {
-        let c = 2 * Math.PI * r; // circumference
-        levels.push([r]);
-        // figure out how many can fit
-        const maxCount = Math.floor(c / (nodeSize / 2 + padding * Math.PI));
+        levels.push([]);
+        // get current level count
+        let levelCount;
+        if (levels.length > levelCounts.length) {
+            levelCount = levelCounts[levelCounts.length - 1] + levelIncrement * (levels.length - levelCounts.length);
+        } else {
+            levelCount = levelCounts[levels.length-1];
+        }
         // add as many as can fit
-        for (let j = 0; j < maxCount && i + j < characters.length; j++) {
+        for (let j = 0; j < levelCount && i + j < characters.length; j++) {
             levels[levels.length-1].push(characters[i + j]);
         }
-        i += maxCount;
-        r += nodeSize + padding;
+        i += levelCount;
     }
+    console.log(levels);
     return levels;
 }
 
