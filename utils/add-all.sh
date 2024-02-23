@@ -2,7 +2,7 @@
 
 # Check if filename is provided as argument
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 <filename> <command>"
+    echo "Usage: $0 <filename>"
     exit 1
 fi
 
