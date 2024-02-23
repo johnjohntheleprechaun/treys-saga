@@ -13,6 +13,7 @@ let offsetY = 0;
  */
 function adjustElementPositions(entries) {
     for (const entry of entries) {
+        console.log(entry)
         entry.target.adjustPos();
     }
 }
@@ -102,6 +103,7 @@ function populateLevels(nodes, levelCounts = [1, 6], levelIncrement = 6) {
         }
         i += levelCount;
     }
+    console.log(levels);
     return levels;
 }
 

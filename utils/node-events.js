@@ -20,5 +20,6 @@ window.addEventListener("mousedown", e => {
 });
 window.addEventListener("mouseup", _ => { mouseButton = -1 });
 window.addEventListener("wheel", event => {
+    console.log(event.deltaY);
     setScale(scale - event.deltaY * scalingModifier);
 });

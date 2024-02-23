@@ -12,6 +12,7 @@ let levels = [];
 
 
 window.addEventListener("load", async () => {
+    console.log("hello world");
     const characters = await populate();
     
     for (const character of characters) {
@@ -20,6 +21,7 @@ window.addEventListener("load", async () => {
     levels = populateLevels(characters);
     for (let i = 0; i < levels.length; i++) {
         const level = levels[i];
+        console.log(level);
         displayCircle(level, 125*(i))
     }
 });
