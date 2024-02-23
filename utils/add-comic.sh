@@ -2,7 +2,7 @@ CURRENT=$(cat comics.json)
 UUID=$(cat /proc/sys/kernel/random/uuid)
 
 if echo "$CURRENT" | grep -q $1; then
-    echo "already in list"
+    echo "$1 already in list"
     exit
 fi
 
