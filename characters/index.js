@@ -12,8 +12,7 @@ let levels = [];
 
 
 window.addEventListener("load", async () => {
-    console.log("hello world");
-    await populate();
+    const characters = await populate();
     
     for (const character of characters) {
         document.body.appendChild(character);
@@ -21,7 +20,6 @@ window.addEventListener("load", async () => {
     levels = populateLevels(characters);
     for (let i = 0; i < levels.length; i++) {
         const level = levels[i];
-        console.log(level);
         displayCircle(level, 125*(i))
     }
 });
@@ -29,10 +27,12 @@ window.addEventListener("load", async () => {
 async function populate() {
     comicDB = await fetch("/comics.json").then(a=>a.json());
     characterDB = await fetch("/characters.json").then(a=>a.json());
+    const characters = [];
     for (const charTemplate of characterDB) {
-        const character = new Character(charTemplate.pfp, charTemplate.comics);
+        const character = new CharacterNode(charTemplate.pfp, charTemplate.comics);
         characters.push(character);
     }
+    return characters;
     //document.body.innerHTML = comicDB["fb9e408e-3771-4d3a-b042-ebde2d14aaad"].embedCode;
 }
 
