@@ -59,7 +59,8 @@
       "25efe9db-42ca-4856-9cf0-f3da5b415cc0",
       "fbad0b79-07c3-4637-b169-9f49cfda529e",
       "3ac23b40-746a-4986-9376-6a57c934ae4d",
-      "86c0fe38-ed50-4384-af02-e93be42450d6"
+      "86c0fe38-ed50-4384-af02-e93be42450d6",
+      "220a7b36-5dbd-49a1-bdd1-bf134f7ec7e4"
     ]
   },
   {
@@ -187,7 +188,8 @@
       "981a67d5-f1b4-477c-b165-c5d74b2fe5dc",
       "14bf5b0d-b3bd-4a4e-aa4e-a51bcc16c98e",
       "3ac23b40-746a-4986-9376-6a57c934ae4d",
-      "86c0fe38-ed50-4384-af02-e93be42450d6"
+      "86c0fe38-ed50-4384-af02-e93be42450d6",
+      "220a7b36-5dbd-49a1-bdd1-bf134f7ec7e4"
     ]
   },
   {
@@ -306,16 +308,19 @@
   },
   {
     "name": "Theo",
-    "description": "",
+    "description": "Former owner of Lucy",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "220a7b36-5dbd-49a1-bdd1-bf134f7ec7e4"
+    ]
   },
   {
     "name": "Sun",
     "description": "The sun.",
     "pfp": "",
     "comics": [
-      "8cd171b2-9b26-4f81-b41c-10ca3a9bfa45"
+      "8cd171b2-9b26-4f81-b41c-10ca3a9bfa45",
+      "220a7b36-5dbd-49a1-bdd1-bf134f7ec7e4"
     ]
   },
   {
