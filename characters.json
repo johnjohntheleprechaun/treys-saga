@@ -27,15 +27,18 @@
     "pfp": "boat.webp",
     "comics": [
       "8016ce79-fbd0-44cd-9965-1616e9340e00",
+      "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f",
       "71217b1d-c4df-4da7-8583-3f099019bc4c",
       "c2a19ef1-da53-4a1d-b7fd-b8fd48cf3dc1"
     ]
   },
   {
     "name": "Trent",
-    "description": "",
+    "description": "The producer for the show Tress hosts.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f"
+    ]
   },
   {
     "name": "Trent's Wife",
@@ -54,7 +57,8 @@
     "description": "A tiger shark.",
     "pfp": "",
     "comics": [
-      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+      "8016ce79-fbd0-44cd-9965-1616e9340e00",
+      "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f"
     ]
   },
   {
@@ -62,7 +66,8 @@
     "description": "A sentient plant.",
     "pfp": "",
     "comics": [
-      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+      "8016ce79-fbd0-44cd-9965-1616e9340e00",
+      "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f"
     ]
   },
   {
@@ -88,7 +93,8 @@
     "description": "The ocean.",
     "pfp": "",
     "comics": [
-      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+      "8016ce79-fbd0-44cd-9965-1616e9340e00",
+      "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f"
     ]
   },
   {
@@ -110,7 +116,8 @@
     "description": "Trey's camera.",
     "pfp": "",
     "comics": [
-      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+      "8016ce79-fbd0-44cd-9965-1616e9340e00",
+      "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f"
     ]
   },
   {
