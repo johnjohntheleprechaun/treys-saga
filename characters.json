@@ -31,7 +31,8 @@
       "3ac23b40-746a-4986-9376-6a57c934ae4d",
       "87658ffb-8952-4aec-b0e8-5823f5e904d7",
       "86c0fe38-ed50-4384-af02-e93be42450d6",
-      "8559b5df-27fc-4a14-8a6b-407d50b2d200"
+      "8559b5df-27fc-4a14-8a6b-407d50b2d200",
+      "5d93bb7a-1d4a-4395-9779-77c1545760ae"
     ]
   },
   {
@@ -193,7 +194,8 @@
       "3ac23b40-746a-4986-9376-6a57c934ae4d",
       "86c0fe38-ed50-4384-af02-e93be42450d6",
       "220a7b36-5dbd-49a1-bdd1-bf134f7ec7e4",
-      "8559b5df-27fc-4a14-8a6b-407d50b2d200"
+      "8559b5df-27fc-4a14-8a6b-407d50b2d200",
+      "5d93bb7a-1d4a-4395-9779-77c1545760ae"
     ]
   },
   {
@@ -330,9 +332,11 @@
   },
   {
     "name": "Tray",
-    "description": "",
+    "description": "A tray that holds specimen (*wink*) collection jars",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "5d93bb7a-1d4a-4395-9779-77c1545760ae"
+    ]
   },
   {
     "name": "Treigh",
@@ -366,9 +370,11 @@
   },
   {
     "name": "Tran",
-    "description": "",
+    "description": "Trinh's child, and the donor offspring of Trey",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "5d93bb7a-1d4a-4395-9779-77c1545760ae"
+    ]
   },
   {
     "name": "Trinh",
@@ -451,7 +457,8 @@
       "494bd48e-a962-4253-9a9f-034428d68af9",
       "6bca1e5e-0d76-4573-8ac7-58ffa783ff80",
       "fbad0b79-07c3-4637-b169-9f49cfda529e",
-      "8559b5df-27fc-4a14-8a6b-407d50b2d200"
+      "8559b5df-27fc-4a14-8a6b-407d50b2d200",
+      "5d93bb7a-1d4a-4395-9779-77c1545760ae"
     ]
   },
   {
