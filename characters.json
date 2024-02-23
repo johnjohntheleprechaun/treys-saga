@@ -38,6 +38,7 @@
       "c3982523-fcd0-4710-bd22-ed035e1220cb",
       "70a39e37-7a00-495a-80f5-8d836f85416e",
       "7de48da1-2674-4748-9eae-5a5d90f55f0c",
+      "a43188cc-db7b-4889-ba4a-d3ded4b3653e"
     ]
   },
   {
@@ -70,7 +71,8 @@
       "86c0fe38-ed50-4384-af02-e93be42450d6",
       "220a7b36-5dbd-49a1-bdd1-bf134f7ec7e4",
       "8559b5df-27fc-4a14-8a6b-407d50b2d200",
-      "c3982523-fcd0-4710-bd22-ed035e1220cb"
+      "c3982523-fcd0-4710-bd22-ed035e1220cb",
+      "a43188cc-db7b-4889-ba4a-d3ded4b3653e"
     ]
   },
   {
@@ -217,7 +219,8 @@
       "19119a11-78fa-4ee4-b78b-27057ee4fb15",
       "c3982523-fcd0-4710-bd22-ed035e1220cb",
       "dd884f91-8503-4622-84de-e5a1c0875ea5",
-      "70a39e37-7a00-495a-80f5-8d836f85416e"
+      "70a39e37-7a00-495a-80f5-8d836f85416e",
+      "a43188cc-db7b-4889-ba4a-d3ded4b3653e"
     ]
   },
   {
@@ -401,9 +404,11 @@
   },
   {
     "name": "Tobias",
-    "description": "",
+    "description": "A rescue swimmer",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "a43188cc-db7b-4889-ba4a-d3ded4b3653e"
+    ]
   },
   {
     "name": "Tran",
@@ -495,7 +500,8 @@
       "6bca1e5e-0d76-4573-8ac7-58ffa783ff80",
       "fbad0b79-07c3-4637-b169-9f49cfda529e",
       "8559b5df-27fc-4a14-8a6b-407d50b2d200",
-      "5d93bb7a-1d4a-4395-9779-77c1545760ae"
+      "5d93bb7a-1d4a-4395-9779-77c1545760ae",
+      "a43188cc-db7b-4889-ba4a-d3ded4b3653e"
     ]
   },
   {
