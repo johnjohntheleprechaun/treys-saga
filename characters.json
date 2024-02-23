@@ -36,7 +36,8 @@
       "90e9b152-c57c-4792-8ca3-a94b141268ae",
       "19119a11-78fa-4ee4-b78b-27057ee4fb15",
       "c3982523-fcd0-4710-bd22-ed035e1220cb",
-      "70a39e37-7a00-495a-80f5-8d836f85416e"
+      "70a39e37-7a00-495a-80f5-8d836f85416e",
+      "7de48da1-2674-4748-9eae-5a5d90f55f0c",
     ]
   },
   {
@@ -392,9 +393,11 @@
   },
   {
     "name": "Troy",
-    "description": "",
+    "description": "A cashier",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "7de48da1-2674-4748-9eae-5a5d90f55f0c"
+    ]
   },
   {
     "name": "Tobias",
