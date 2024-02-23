@@ -28,12 +28,20 @@ function* getAllCharacters() {
     }
 }
 
+function* getAllNodes() {
+    for (const element of document.body.children) {
+        if (element instanceof DisplayNode) {
+            yield element;
+        }
+    }
+}
+
 /**
- * Unfocuses all of the character nodes.
+ * Unfocuses all nodes.
  */
 function unfocusAll() {
-    for (const character of getAllCharacters()) {
-        character.unfocusNode();
+    for (const node of getAllNodes()) {
+        node.unfocusNode();
     }
 }
 

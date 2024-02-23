@@ -157,6 +157,9 @@ class ComicNode extends DisplayNode {
      * Close the embedded reddit post
      */
     unfocusNode() {
+        if (!this.embedElement) {
+            return;
+        }
         this.embedElement.style.display = "none";
         this.children.item(0).style.display = "block";
         this.style.width = "80px";
