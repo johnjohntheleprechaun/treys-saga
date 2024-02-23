@@ -83,7 +83,8 @@
       "155182da-5eed-43e2-b48b-4c7826c0900c",
       "8cd171b2-9b26-4f81-b41c-10ca3a9bfa45",
       "3f7c9f50-e573-41e6-83df-38f43143fea0",
-      "25efe9db-42ca-4856-9cf0-f3da5b415cc0"
+      "25efe9db-42ca-4856-9cf0-f3da5b415cc0",
+      "981a67d5-f1b4-477c-b165-c5d74b2fe5dc"
     ]
   },
   {
@@ -106,7 +107,8 @@
       "5657f2e5-3c07-4086-898f-65216152a8b6",
       "25efe9db-42ca-4856-9cf0-f3da5b415cc0",
       "1d0e324d-17b3-4700-a3d7-bfe64fc94c7c",
-      "fbad0b79-07c3-4637-b169-9f49cfda529e"
+      "fbad0b79-07c3-4637-b169-9f49cfda529e",
+      "981a67d5-f1b4-477c-b165-c5d74b2fe5dc"
     ]
   },
   {
@@ -120,7 +122,8 @@
       "fc1fbb2f-e74d-482d-9f9d-5b7c878da0e1",
       "155182da-5eed-43e2-b48b-4c7826c0900c",
       "27f7e051-e2a9-4aa9-a1de-80340ec38ce3",
-      "3f7c9f50-e573-41e6-83df-38f43143fea0"
+      "3f7c9f50-e573-41e6-83df-38f43143fea0",
+      "981a67d5-f1b4-477c-b165-c5d74b2fe5dc"
     ]
   },
   {
@@ -172,7 +175,8 @@
       "5657f2e5-3c07-4086-898f-65216152a8b6",
       "25efe9db-42ca-4856-9cf0-f3da5b415cc0",
       "1d0e324d-17b3-4700-a3d7-bfe64fc94c7c",
-      "fbad0b79-07c3-4637-b169-9f49cfda529e"
+      "fbad0b79-07c3-4637-b169-9f49cfda529e",
+      "981a67d5-f1b4-477c-b165-c5d74b2fe5dc"
     ]
   },
   {
@@ -258,9 +262,11 @@
   },
   {
     "name": "Trey III",
-    "description": "",
+    "description": "Trudy's grandson",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "981a67d5-f1b4-477c-b165-c5d74b2fe5dc"
+    ]
   },
   {
     "name": "TreeHopper2000",
