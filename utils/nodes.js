@@ -5,11 +5,11 @@ let resizeObserver;
 window.addEventListener("load", _ => { resizeObserver = new ResizeObserver(adjustElementPositions) });
 /**
  * The currently focused node.
- * @type {ComicNode}
+ * @type {DisplayNode}
  */
 let focused;
 /**
- * @type {Comic}
+ * @type {ComicNode}
  */
 let displayedComic;
 
@@ -18,7 +18,7 @@ let displayedComic;
 /**
  * This is the base node class, it contains functions like focusing, movement, etc.
  */
-class ComicNode extends HTMLDivElement {
+class DisplayNode extends HTMLDivElement {
     constructor () {
         super();
         this.classList.add("comic-node");
@@ -119,11 +119,11 @@ class ComicNode extends HTMLDivElement {
         this.style.filter = "";
     }
 }
-customElements.define("comic-node", ComicNode, { extends: "div" });
+customElements.define("comic-node", DisplayNode, { extends: "div" });
 /**
  * A comic. When focused it will open the embedded reddit post
  */
-class Comic extends ComicNode { // A Tree
+class ComicNode extends DisplayNode {
     /**
      * Set class list, the display pfp, and create the element for the embedded reddit post
      * @param {string} uuid The uuid of the comic
@@ -168,12 +168,12 @@ class Comic extends ComicNode { // A Tree
         this.style.borderRadius = "100%";
     }
 }
-customElements.define("comic-element", Comic, { extends: "div" });
+customElements.define("comic-element", ComicNode, { extends: "div" });
 
 /**
  * A character Node. When focused it will display all of it's related comic nodes.
  */
-class Character extends ComicNode {
+class CharacterNode extends DisplayNode {
     /**
      * @param {string} pfp a url of the characters display image
      * @param {string[]} comics a list of comic uuids
@@ -207,7 +207,7 @@ class Character extends ComicNode {
         // spawn comics for the character
         this.comicElements = [];
         for (const comic of this.comics) {
-            const comicElement = new Comic(comic);
+            const comicElement = new ComicNode(comic);
             this.parentElement.appendChild(comicElement);
             this.comicElements.push(comicElement);
         }
@@ -229,4 +229,4 @@ class Character extends ComicNode {
         }
     }
 }
-customElements.define("character-element", Character, { extends: "div" });
+customElements.define("character-element", CharacterNode, { extends: "div" });
