@@ -11,7 +11,8 @@
       "494bd48e-a962-4253-9a9f-034428d68af9",
       "d59b68a4-f53b-4bca-a24f-a160b752f7f6",
       "164d9a6d-0113-4810-b344-b64715bab8b6",
-      "38de110a-9072-455d-98f1-185d1afa28ea"
+      "38de110a-9072-455d-98f1-185d1afa28ea",
+      "155182da-5eed-43e2-b48b-4c7826c0900c"
     ]
   },
   {
@@ -20,7 +21,8 @@
     "pfp": "tress.webp",
     "comics": [
       "8016ce79-fbd0-44cd-9965-1616e9340e00",
-      "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f"
+      "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f",
+      "155182da-5eed-43e2-b48b-4c7826c0900c"
     ]
   },
   {
@@ -41,7 +43,8 @@
     "pfp": "",
     "comics": [
       "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f",
-      "26bbaad3-9ee1-49ed-97c0-7b4839294988"
+      "26bbaad3-9ee1-49ed-97c0-7b4839294988",
+      "155182da-5eed-43e2-b48b-4c7826c0900c"
     ]
   },
   {
@@ -56,7 +59,10 @@
     "name": "Trudy",
     "description": "Trey's secret admirer/stalker.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "c2a19ef1-da53-4a1d-b7fd-b8fd48cf3dc1",
+      "155182da-5eed-43e2-b48b-4c7826c0900c"
+    ]
   },
   {
     "name": "Shark",
@@ -80,7 +86,8 @@
       "8016ce79-fbd0-44cd-9965-1616e9340e00",
       "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f",
       "c2a19ef1-da53-4a1d-b7fd-b8fd48cf3dc1",
-      "fc1fbb2f-e74d-482d-9f9d-5b7c878da0e1"
+      "fc1fbb2f-e74d-482d-9f9d-5b7c878da0e1",
+      "155182da-5eed-43e2-b48b-4c7826c0900c"
     ]
   },
   {
@@ -88,7 +95,8 @@
     "description": "Trey's dog",
     "pfp": "",
     "comics": [
-      "d59b68a4-f53b-4bca-a24f-a160b752f7f6"
+      "d59b68a4-f53b-4bca-a24f-a160b752f7f6",
+      "155182da-5eed-43e2-b48b-4c7826c0900c"
     ]
   },
   {
@@ -117,7 +125,8 @@
       "494bd48e-a962-4253-9a9f-034428d68af9",
       "d59b68a4-f53b-4bca-a24f-a160b752f7f6",
       "164d9a6d-0113-4810-b344-b64715bab8b6",
-      "38de110a-9072-455d-98f1-185d1afa28ea"
+      "38de110a-9072-455d-98f1-185d1afa28ea",
+      "155182da-5eed-43e2-b48b-4c7826c0900c"
     ]
   },
   {
@@ -141,7 +150,8 @@
     "comics": [
       "8016ce79-fbd0-44cd-9965-1616e9340e00",
       "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f",
-      "c2a19ef1-da53-4a1d-b7fd-b8fd48cf3dc1"
+      "c2a19ef1-da53-4a1d-b7fd-b8fd48cf3dc1",
+      "155182da-5eed-43e2-b48b-4c7826c0900c"
     ]
   },
   {
@@ -346,7 +356,9 @@
     "description": "A phone that's owned by Trey.",
     "pfp": "",
     "comics": [
-      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+      "8016ce79-fbd0-44cd-9965-1616e9340e00",
+      "71217b1d-c4df-4da7-8583-3f099019bc4c",
+      "155182da-5eed-43e2-b48b-4c7826c0900c"
     ]
   },
   {
