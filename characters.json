@@ -53,7 +53,8 @@
       "0f95ab66-8eaa-4e7a-aae8-12020fbd9f3a",
       "90d3732f-ff55-495d-ace3-09f7da7e2bd9",
       "99824a47-4156-428a-bec7-6d5b45bce832",
-      "d467a346-f61d-4a78-a9dd-e1b2f9ec3778"
+      "d467a346-f61d-4a78-a9dd-e1b2f9ec3778",
+      "ac4031db-6ef5-4df8-823d-f34801289eaf"
     ]
   },
   {
@@ -572,9 +573,11 @@
   },
   {
     "name": "Dog Sitter",
-    "description": "",
+    "description": "The dog sitter Trey hired",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "ac4031db-6ef5-4df8-823d-f34801289eaf"
+    ]
   },
   {
     "name": "Can",
