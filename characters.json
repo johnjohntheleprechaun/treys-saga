@@ -13,7 +13,8 @@
       "164d9a6d-0113-4810-b344-b64715bab8b6",
       "38de110a-9072-455d-98f1-185d1afa28ea",
       "155182da-5eed-43e2-b48b-4c7826c0900c",
-      "8a07d61c-1475-4b57-aa37-78010d15651a"
+      "8a07d61c-1475-4b57-aa37-78010d15651a",
+      "98f0a991-4932-4fba-a4e4-2ce30abdb7f0"
     ]
   },
   {
@@ -76,7 +77,8 @@
       "494bd48e-a962-4253-9a9f-034428d68af9",
       "d59b68a4-f53b-4bca-a24f-a160b752f7f6",
       "164d9a6d-0113-4810-b344-b64715bab8b6",
-      "38de110a-9072-455d-98f1-185d1afa28ea"
+      "38de110a-9072-455d-98f1-185d1afa28ea",
+      "98f0a991-4932-4fba-a4e4-2ce30abdb7f0"
     ]
   },
   {
@@ -110,9 +112,11 @@
   },
   {
     "name": "Trawler",
-    "description": "",
+    "description": "A trawler.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "98f0a991-4932-4fba-a4e4-2ce30abdb7f0"
+    ]
   },
   {
     "name": "Ocean",
@@ -128,14 +132,17 @@
       "164d9a6d-0113-4810-b344-b64715bab8b6",
       "38de110a-9072-455d-98f1-185d1afa28ea",
       "155182da-5eed-43e2-b48b-4c7826c0900c",
-      "8a07d61c-1475-4b57-aa37-78010d15651a"
+      "8a07d61c-1475-4b57-aa37-78010d15651a",
+      "98f0a991-4932-4fba-a4e4-2ce30abdb7f0"
     ]
   },
   {
     "name": "Fish",
-    "description": "",
+    "description": "Fish.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "98f0a991-4932-4fba-a4e4-2ce30abdb7f0"
+    ]
   },
   {
     "name": "Cup",
