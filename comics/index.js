@@ -9,7 +9,7 @@ window.addEventListener("load", async () => {
 async function loadComics() {
     comicDB = await fetch("/comics.json").then(a=>a.json());
     for (const key in comicDB) {
-        const comic = new ComicNode(key);
+        const comic = new Comic(key);
         comics.push(comic)
         document.body.appendChild(comic);
     }
