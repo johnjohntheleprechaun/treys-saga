@@ -147,7 +147,8 @@
       "27f7e051-e2a9-4aa9-a1de-80340ec38ce3",
       "3f7c9f50-e573-41e6-83df-38f43143fea0",
       "981a67d5-f1b4-477c-b165-c5d74b2fe5dc",
-      "6da62c8c-b8a6-4234-a095-deef3d6dd899"
+      "6da62c8c-b8a6-4234-a095-deef3d6dd899",
+      "5f2ec5b6-27d7-4fc5-a23e-1243f03dacb2"
     ]
   },
   {
@@ -255,7 +256,8 @@
     "pfp": "",
     "comics": [
       "fc1fbb2f-e74d-482d-9f9d-5b7c878da0e1",
-      "3f7c9f50-e573-41e6-83df-38f43143fea0"
+      "3f7c9f50-e573-41e6-83df-38f43143fea0",
+      "5f2ec5b6-27d7-4fc5-a23e-1243f03dacb2"
     ]
   },
   {
@@ -378,9 +380,11 @@
   },
   {
     "name": "Dr. Tresla",
-    "description": "",
+    "description": "Trista's boss",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "5f2ec5b6-27d7-4fc5-a23e-1243f03dacb2"
+    ]
   },
   {
     "name": "Troy",
