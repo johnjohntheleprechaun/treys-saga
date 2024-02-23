@@ -63,7 +63,8 @@
       "3dabb07b-92c9-4f50-93ff-49736808a194",
       "2506e85f-dad6-4d42-a9b5-b27f16799796",
       "a3c9aa12-6dc8-4440-970b-6d6fedb1e711",
-      "396a5bd9-e345-4486-8342-c65a15f5bc5a"
+      "396a5bd9-e345-4486-8342-c65a15f5bc5a",
+      "4b64fc8c-9eba-4f8a-a00f-d9100b4ea58e"
     ]
   },
   {
@@ -318,7 +319,8 @@
       "2506e85f-dad6-4d42-a9b5-b27f16799796",
       "a3c9aa12-6dc8-4440-970b-6d6fedb1e711",
       "221940e5-2f56-4963-9d27-5896fefec50d",
-      "396a5bd9-e345-4486-8342-c65a15f5bc5a"
+      "396a5bd9-e345-4486-8342-c65a15f5bc5a",
+      "4b64fc8c-9eba-4f8a-a00f-d9100b4ea58e"
     ]
   },
   {
@@ -359,7 +361,8 @@
       "19119a11-78fa-4ee4-b78b-27057ee4fb15",
       "1a8303ea-aa08-479a-af9a-943546803b9a",
       "a3c9aa12-6dc8-4440-970b-6d6fedb1e711",
-      "396a5bd9-e345-4486-8342-c65a15f5bc5a"
+      "396a5bd9-e345-4486-8342-c65a15f5bc5a",
+      "4b64fc8c-9eba-4f8a-a00f-d9100b4ea58e"
     ]
   },
   {
@@ -698,9 +701,11 @@
   },
   {
     "name": "Trevor",
-    "description": "",
+    "description": "An office worker",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "4b64fc8c-9eba-4f8a-a00f-d9100b4ea58e"
+    ]
   },
   {
     "name": "Tracie Goldstein",
