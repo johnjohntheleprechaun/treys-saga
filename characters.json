@@ -67,7 +67,8 @@
       "4b64fc8c-9eba-4f8a-a00f-d9100b4ea58e",
       "4b64fc8c-9eba-4f8a-a00f-d9100b4ea58e",
       "12367386-20e2-42bd-a150-fcced2b70ced",
-      "838672cb-e55a-4c83-83b8-2d9e28202739"
+      "838672cb-e55a-4c83-83b8-2d9e28202739",
+      "5d27b7dc-020c-439f-8840-7814fa9fdf0b"
     ]
   },
   {
@@ -727,14 +728,17 @@
     "description": "Trey's elderly neighbour",
     "pfp": "",
     "comics": [
-      "d59ec9c1-a1af-4ffc-b3f6-8da06e78df13"
+      "d59ec9c1-a1af-4ffc-b3f6-8da06e78df13",
+      "5d27b7dc-020c-439f-8840-7814fa9fdf0b"
     ]
   },
   {
     "name": "Thomas",
-    "description": "",
+    "description": "Tracie's son",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "5d27b7dc-020c-439f-8840-7814fa9fdf0b"
+    ]
   },
   {
     "name": "Stone God",
