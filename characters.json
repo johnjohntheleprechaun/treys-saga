@@ -1,7 +1,7 @@
 [
   {
     "name": "Trey",
-    "description": "",
+    "description": "A suicidal camera operator.",
     "pfp": "trey.webp",
     "comics": [
       "8016ce79-fbd0-44cd-9965-1616e9340e00",
@@ -14,17 +14,19 @@
   },
   {
     "name": "Tress",
-    "description": "",
+    "description": "A TV show host at Trey's job.",
     "pfp": "tress.webp",
     "comics": [
+      "8016ce79-fbd0-44cd-9965-1616e9340e00",
       "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f"
     ]
   },
   {
     "name": "Lucy",
-    "description": "",
+    "description": "The boat Trey bought from Theo",
     "pfp": "boat.webp",
     "comics": [
+      "8016ce79-fbd0-44cd-9965-1616e9340e00",
       "71217b1d-c4df-4da7-8583-3f099019bc4c",
       "c2a19ef1-da53-4a1d-b7fd-b8fd48cf3dc1"
     ]
@@ -43,21 +45,25 @@
   },
   {
     "name": "Trudy",
-    "description": "",
+    "description": "Trey's secret admirer/stalker.",
     "pfp": "",
     "comics": []
   },
   {
     "name": "Shark",
-    "description": "",
+    "description": "A tiger shark.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+    ]
   },
   {
     "name": "The Water Plant",
-    "description": "",
+    "description": "A sentient plant.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+    ]
   },
   {
     "name": "Trex",
@@ -79,9 +85,11 @@
   },
   {
     "name": "Ocean",
-    "description": "",
+    "description": "The ocean.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+    ]
   },
   {
     "name": "Fish",
@@ -91,15 +99,19 @@
   },
   {
     "name": "Cup",
-    "description": "",
+    "description": "A cup.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+    ]
   },
   {
     "name": "Trek",
-    "description": "",
+    "description": "Trey's camera.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+    ]
   },
   {
     "name": "Trista",
@@ -289,15 +301,19 @@
   },
   {
     "name": "Chum",
-    "description": "",
+    "description": "Chopped fish.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+    ]
   },
   {
     "name": "Trey's Phone",
-    "description": "",
+    "description": "A phone that's owned by Trey.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "8016ce79-fbd0-44cd-9965-1616e9340e00"
+    ]
   },
   {
     "name": "Trevor",
