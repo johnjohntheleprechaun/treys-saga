@@ -23,7 +23,7 @@ function adjustElementPositions(entries) {
  */
 function* getAllCharacters() {
     for (const element of document.body.children) {
-        if (element instanceof Character) {
+        if (element instanceof CharacterNode) {
             yield element;
         }
     }
@@ -56,7 +56,7 @@ function setScale(newScale) {
  */
 function setOffset(x, y) {
     for (const element of document.body.children) {
-        if (element instanceof ComicNode) {
+        if (element instanceof DisplayNode) {
             element.setOffset(x, y);
         }
     }
@@ -64,7 +64,7 @@ function setOffset(x, y) {
 
 /**
  * Display the nodes evenly in a circle. Optionally around a center node.
- * @param {ComicNode[]} nodes a list of nodes to set positions for
+ * @param {DisplayNode[]} nodes a list of nodes to set positions for
  * @param {number} radius the radius
  */
 function displayCircle(nodes, radius, center = undefined) {

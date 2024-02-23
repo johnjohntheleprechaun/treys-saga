@@ -31,7 +31,7 @@ async function populate() {
     characterDB = await fetch("/characters.json").then(a=>a.json());
     const characters = [];
     for (const charTemplate of characterDB) {
-        const character = new Character(charTemplate.pfp, charTemplate.comics);
+        const character = new CharacterNode(charTemplate.pfp, charTemplate.comics);
         characters.push(character);
     }
     return characters;
