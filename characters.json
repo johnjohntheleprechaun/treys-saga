@@ -49,7 +49,8 @@
       "8429c8b9-774d-42a4-b827-fd233a7699f7",
       "a5725f7e-e9ac-4be4-b8bc-b805b6b3446d",
       "b64f2fb6-7809-421b-8d46-a5d8c69e8895",
-      "1a8303ea-aa08-479a-af9a-943546803b9a"
+      "1a8303ea-aa08-479a-af9a-943546803b9a",
+      "0f95ab66-8eaa-4e7a-aae8-12020fbd9f3a"
     ]
   },
   {
@@ -544,9 +545,11 @@
   },
   {
     "name": "'Trix Guy",
-    "description": "",
+    "description": "Tricked Trey into thinking he's in the matrix",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "0f95ab66-8eaa-4e7a-aae8-12020fbd9f3a"
+    ]
   },
   {
     "name": "Trapada",
