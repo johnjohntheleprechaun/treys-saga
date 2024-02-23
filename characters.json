@@ -37,14 +37,17 @@
     "description": "The producer for the show Tress hosts.",
     "pfp": "",
     "comics": [
-      "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f"
+      "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f",
+      "26bbaad3-9ee1-49ed-97c0-7b4839294988"
     ]
   },
   {
-    "name": "Trent's Wife",
-    "description": "",
+    "name": "Trentette",
+    "description": "Trent's wife",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "26bbaad3-9ee1-49ed-97c0-7b4839294988"
+    ]
   },
   {
     "name": "Trudy",
