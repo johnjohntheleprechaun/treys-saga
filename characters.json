@@ -130,7 +130,8 @@
       "8559b5df-27fc-4a14-8a6b-407d50b2d200",
       "90e9b152-c57c-4792-8ca3-a94b141268ae",
       "19119a11-78fa-4ee4-b78b-27057ee4fb15",
-      "c3982523-fcd0-4710-bd22-ed035e1220cb"
+      "c3982523-fcd0-4710-bd22-ed035e1220cb",
+      "dd884f91-8503-4622-84de-e5a1c0875ea5"
     ]
   },
   {
@@ -156,7 +157,8 @@
     "comics": [
       "d59b68a4-f53b-4bca-a24f-a160b752f7f6",
       "155182da-5eed-43e2-b48b-4c7826c0900c",
-      "3f7c9f50-e573-41e6-83df-38f43143fea0"
+      "3f7c9f50-e573-41e6-83df-38f43143fea0",
+      "dd884f91-8503-4622-84de-e5a1c0875ea5"
     ]
   },
   {
@@ -208,7 +210,8 @@
       "5d93bb7a-1d4a-4395-9779-77c1545760ae",
       "90e9b152-c57c-4792-8ca3-a94b141268ae",
       "19119a11-78fa-4ee4-b78b-27057ee4fb15",
-      "c3982523-fcd0-4710-bd22-ed035e1220cb"
+      "c3982523-fcd0-4710-bd22-ed035e1220cb",
+      "dd884f91-8503-4622-84de-e5a1c0875ea5"
     ]
   },
   {
@@ -334,7 +337,8 @@
     "description": "Former owner of Lucy",
     "pfp": "",
     "comics": [
-      "220a7b36-5dbd-49a1-bdd1-bf134f7ec7e4"
+      "220a7b36-5dbd-49a1-bdd1-bf134f7ec7e4",
+      "dd884f91-8503-4622-84de-e5a1c0875ea5"
     ]
   },
   {
@@ -344,7 +348,8 @@
     "comics": [
       "8cd171b2-9b26-4f81-b41c-10ca3a9bfa45",
       "220a7b36-5dbd-49a1-bdd1-bf134f7ec7e4",
-      "8559b5df-27fc-4a14-8a6b-407d50b2d200"
+      "8559b5df-27fc-4a14-8a6b-407d50b2d200",
+      "dd884f91-8503-4622-84de-e5a1c0875ea5"
     ]
   },
   {
@@ -365,9 +370,11 @@
   },
   {
     "name": "Triangle",
-    "description": "",
+    "description": "A triangle with a very similar experience to Trey's",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "dd884f91-8503-4622-84de-e5a1c0875ea5"
+    ]
   },
   {
     "name": "Dr. Tresla",
