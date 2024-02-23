@@ -1,7 +1,13 @@
 CURRENT=$(cat comics.json)
 UUID=$(cat /proc/sys/kernel/random/uuid)
+
+if echo "$CURRENT" | grep -q $1; then
+    echo "already in list"
+    exit
+fi
+
 EMBED=$(curl -s https://www.reddit.com/oembed?url=$1)
-echo "$EMBED\n\n\n"
+echo "$1"
 NEWFILE=$(echo $CURRENT | jq \
     --arg uuid $UUID \
     --arg url $1 \
