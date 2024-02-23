@@ -73,7 +73,8 @@
     "comics": [
       "8016ce79-fbd0-44cd-9965-1616e9340e00",
       "7e925ae8-2e6e-44ed-bbb1-0a4068faef5f",
-      "c2a19ef1-da53-4a1d-b7fd-b8fd48cf3dc1"
+      "c2a19ef1-da53-4a1d-b7fd-b8fd48cf3dc1",
+      "fc1fbb2f-e74d-482d-9f9d-5b7c878da0e1"
     ]
   },
   {
@@ -132,9 +133,11 @@
   },
   {
     "name": "Trista",
-    "description": "",
+    "description": "A scientist at the lab where The Water Plant was grown.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "fc1fbb2f-e74d-482d-9f9d-5b7c878da0e1"
+    ]
   },
   {
     "name": "Tred",
