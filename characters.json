@@ -225,7 +225,8 @@
       "155182da-5eed-43e2-b48b-4c7826c0900c",
       "3f7c9f50-e573-41e6-83df-38f43143fea0",
       "dd884f91-8503-4622-84de-e5a1c0875ea5",
-      "36bf11ae-b5b5-4d06-a68a-9a55c671605e"
+      "36bf11ae-b5b5-4d06-a68a-9a55c671605e",
+      "d59ec9c1-a1af-4ffc-b3f6-8da06e78df13"
     ]
   },
   {
@@ -655,7 +656,8 @@
       "8016ce79-fbd0-44cd-9965-1616e9340e00",
       "71217b1d-c4df-4da7-8583-3f099019bc4c",
       "155182da-5eed-43e2-b48b-4c7826c0900c",
-      "3f7c9f50-e573-41e6-83df-38f43143fea0"
+      "3f7c9f50-e573-41e6-83df-38f43143fea0",
+      "d59ec9c1-a1af-4ffc-b3f6-8da06e78df13"
     ]
   },
   {
@@ -665,10 +667,12 @@
     "comics": []
   },
   {
-    "name": "Tracie",
-    "description": "",
+    "name": "Tracie Goldstein",
+    "description": "Trey's elderly neighbour",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "d59ec9c1-a1af-4ffc-b3f6-8da06e78df13"
+    ]
   },
   {
     "name": "Thomas",
