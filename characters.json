@@ -40,7 +40,8 @@
       "7de48da1-2674-4748-9eae-5a5d90f55f0c",
       "a43188cc-db7b-4889-ba4a-d3ded4b3653e",
       "6c02e686-031c-49d7-854b-9520c4c2de14",
-      "c46a316e-170f-4109-a79c-0b936c9f7817"
+      "c46a316e-170f-4109-a79c-0b936c9f7817",
+      "f460b348-6942-4ac3-8776-aa9d50c57211"
     ]
   },
   {
@@ -457,9 +458,11 @@
   },
   {
     "name": "The Cashier",
-    "description": "",
+    "description": "A cashier",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "f460b348-6942-4ac3-8776-aa9d50c57211"
+    ]
   },
   {
     "name": "Bugs Bunny",
@@ -505,9 +508,11 @@
   },
   {
     "name": "Can",
-    "description": "",
+    "description": "A can",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "f460b348-6942-4ac3-8776-aa9d50c57211"
+    ]
   },
   {
     "name": "Trosh",
