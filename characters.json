@@ -28,7 +28,8 @@
       "1d0e324d-17b3-4700-a3d7-bfe64fc94c7c",
       "fbad0b79-07c3-4637-b169-9f49cfda529e",
       "14bf5b0d-b3bd-4a4e-aa4e-a51bcc16c98e",
-      "3ac23b40-746a-4986-9376-6a57c934ae4d"
+      "3ac23b40-746a-4986-9376-6a57c934ae4d",
+      "87658ffb-8952-4aec-b0e8-5823f5e904d7"
     ]
   },
   {
@@ -276,15 +277,19 @@
   },
   {
     "name": "TreeHopper2000",
-    "description": "",
+    "description": "An online friend of Trey's",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "87658ffb-8952-4aec-b0e8-5823f5e904d7"
+    ]
   },
   {
     "name": "Treminator",
-    "description": "",
+    "description": "An online friend of TreeHopper2000",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "87658ffb-8952-4aec-b0e8-5823f5e904d7"
+    ]
   },
   {
     "name": "Tara",
