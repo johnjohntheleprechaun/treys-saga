@@ -50,7 +50,8 @@
       "a5725f7e-e9ac-4be4-b8bc-b805b6b3446d",
       "b64f2fb6-7809-421b-8d46-a5d8c69e8895",
       "1a8303ea-aa08-479a-af9a-943546803b9a",
-      "0f95ab66-8eaa-4e7a-aae8-12020fbd9f3a"
+      "0f95ab66-8eaa-4e7a-aae8-12020fbd9f3a",
+      "90d3732f-ff55-495d-ace3-09f7da7e2bd9"
     ]
   },
   {
@@ -64,7 +65,8 @@
       "c3982523-fcd0-4710-bd22-ed035e1220cb",
       "6c02e686-031c-49d7-854b-9520c4c2de14",
       "c46a316e-170f-4109-a79c-0b936c9f7817",
-      "1a8303ea-aa08-479a-af9a-943546803b9a"
+      "1a8303ea-aa08-479a-af9a-943546803b9a",
+      "90d3732f-ff55-495d-ace3-09f7da7e2bd9"
     ]
   },
   {
@@ -169,7 +171,8 @@
       "8429c8b9-774d-42a4-b827-fd233a7699f7",
       "a5725f7e-e9ac-4be4-b8bc-b805b6b3446d",
       "b64f2fb6-7809-421b-8d46-a5d8c69e8895",
-      "1a8303ea-aa08-479a-af9a-943546803b9a"
+      "1a8303ea-aa08-479a-af9a-943546803b9a",
+      "90d3732f-ff55-495d-ace3-09f7da7e2bd9"
     ]
   },
   {
@@ -270,7 +273,8 @@
       "a5725f7e-e9ac-4be4-b8bc-b805b6b3446d",
       "b64f2fb6-7809-421b-8d46-a5d8c69e8895",
       "36bf11ae-b5b5-4d06-a68a-9a55c671605e",
-      "1a8303ea-aa08-479a-af9a-943546803b9a"
+      "1a8303ea-aa08-479a-af9a-943546803b9a",
+      "90d3732f-ff55-495d-ace3-09f7da7e2bd9"
     ]
   },
   {
@@ -325,7 +329,8 @@
     "pfp": "",
     "comics": [
       "5657f2e5-3c07-4086-898f-65216152a8b6",
-      "c3982523-fcd0-4710-bd22-ed035e1220cb"
+      "c3982523-fcd0-4710-bd22-ed035e1220cb",
+      "90d3732f-ff55-495d-ace3-09f7da7e2bd9"
     ]
   },
   {
@@ -395,7 +400,8 @@
     "description": "Trey's mom",
     "pfp": "",
     "comics": [
-      "86c0fe38-ed50-4384-af02-e93be42450d6"
+      "86c0fe38-ed50-4384-af02-e93be42450d6",
+      "90d3732f-ff55-495d-ace3-09f7da7e2bd9"
     ]
   },
   {
@@ -553,9 +559,11 @@
   },
   {
     "name": "Trapada",
-    "description": "",
+    "description": "A racoon",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "90d3732f-ff55-495d-ace3-09f7da7e2bd9"
+    ]
   },
   {
     "name": "Dog Sitter",
