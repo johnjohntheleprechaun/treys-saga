@@ -24,7 +24,8 @@
       "dc651886-4ad6-492d-bcf9-05f94be63561",
       "3f7c9f50-e573-41e6-83df-38f43143fea0",
       "5657f2e5-3c07-4086-898f-65216152a8b6",
-      "25efe9db-42ca-4856-9cf0-f3da5b415cc0"
+      "25efe9db-42ca-4856-9cf0-f3da5b415cc0",
+      "1d0e324d-17b3-4700-a3d7-bfe64fc94c7c"
     ]
   },
   {
@@ -101,7 +102,8 @@
       "ac146844-e135-44f9-af8a-44a71b16b858",
       "6bca1e5e-0d76-4573-8ac7-58ffa783ff80",
       "5657f2e5-3c07-4086-898f-65216152a8b6",
-      "25efe9db-42ca-4856-9cf0-f3da5b415cc0"
+      "25efe9db-42ca-4856-9cf0-f3da5b415cc0",
+      "1d0e324d-17b3-4700-a3d7-bfe64fc94c7c"
     ]
   },
   {
@@ -165,7 +167,8 @@
       "ac146844-e135-44f9-af8a-44a71b16b858",
       "6bca1e5e-0d76-4573-8ac7-58ffa783ff80",
       "5657f2e5-3c07-4086-898f-65216152a8b6",
-      "25efe9db-42ca-4856-9cf0-f3da5b415cc0"
+      "25efe9db-42ca-4856-9cf0-f3da5b415cc0",
+      "1d0e324d-17b3-4700-a3d7-bfe64fc94c7c"
     ]
   },
   {
@@ -227,9 +230,11 @@
   },
   {
     "name": "God",
-    "description": "",
+    "description": "God.",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "1d0e324d-17b3-4700-a3d7-bfe64fc94c7c"
+    ]
   },
   {
     "name": "Trip",
