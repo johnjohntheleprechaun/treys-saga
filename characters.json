@@ -250,9 +250,11 @@
   },
   {
     "name": "Trelk",
-    "description": "",
+    "description": "A totally malicious elk",
     "pfp": "",
-    "comics": []
+    "comics": [
+      "0370ef60-98b8-4f66-a94a-9975fa28a876"
+    ]
   },
   {
     "name": "Trey III",
