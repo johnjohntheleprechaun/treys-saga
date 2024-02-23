@@ -182,7 +182,7 @@ class CharacterNode extends DisplayNode {
         super();
         const pfpElement = document.createElement("img");
         this.comics = comics;
-        pfpElement.src = pfp !== "" ? "/pfps/" + pfp : "https://placekitten.com/200/200";
+        pfpElement.src = pfp ? pfp : "https://placekitten.com/200/200";
         this.appendChild(pfpElement);
         this.hidden = false;
     }
