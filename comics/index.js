@@ -14,9 +14,5 @@ async function loadComics() {
         document.body.appendChild(comic);
     }
     const levels = populateLevels(comics);
-    let i = 0;
-    for (const level of levels) {
-        displayCircle(level, 125 * i);
-        i++;
-    }
+    displayLevels(levels);
 }

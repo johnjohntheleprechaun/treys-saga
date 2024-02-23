@@ -211,7 +211,8 @@ class CharacterNode extends DisplayNode {
             this.comicElements.push(comicElement);
         }
         // position comics
-        displayCircle(this.comicElements, 150, this);
+        const levels = populateLevels(this.comicElements, true);
+        displayLevels(levels, 150, this);
     }
     /**
      * Remove the comic nodes spawned by this node

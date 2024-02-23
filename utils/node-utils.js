@@ -107,9 +107,9 @@ function displayLevels(levels, radiusIncrement=125, center=undefined) {
 /**
  * populates levels based on params like increase per level
  */
-function populateLevels(nodes, levelCounts = [1, 6], levelIncrement = 6) {
-    let i = 1; // current character being placed
-    const levels = [[nodes[0]]];
+function populateLevels(nodes, skipFirst=false, levelCounts = [1, 6], levelIncrement = 6) {
+    let i = skipFirst ? 0 : 1; // current character being placed
+    const levels = skipFirst ? [[]] : [[nodes[0]]];
     while (i < nodes.length) {
         levels.push([]);
         // get current level count

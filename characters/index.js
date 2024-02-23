@@ -18,10 +18,7 @@ window.addEventListener("load", async () => {
         document.body.appendChild(character);
     }
     levels = populateLevels(characters);
-    for (let i = 0; i < levels.length; i++) {
-        const level = levels[i];
-        displayCircle(level, 125*(i))
-    }
+    displayLevels(levels);
 });
 
 async function populate() {
