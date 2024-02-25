@@ -7,7 +7,7 @@ if [ $# -eq 0 ]; then
 fi
 
 filename=$1
-command_to_run="python /utils/curation/add-comic.py"
+command_to_run="python utils/curation/add-comic.py"
 
 # Check if the file exists
 if [ ! -f "$filename" ]; then
@@ -17,7 +17,7 @@ fi
 
 # Read each line from the file and execute the command
 while IFS= read -r line; do
-    $command_to_run "$line"
+    $command_to_run "$line" < /dev/tty
 done < "$filename"
 
 exit 0
