@@ -7,7 +7,7 @@ if echo "$CURRENT" | grep -q $1; then
 fi
 
 EMBED=$(curl -s https://www.reddit.com/oembed?url=$1)
-echo "$1"
+echo "$UUID"
 NEWFILE=$(echo $CURRENT | jq \
     --arg uuid $UUID \
     --arg url $1 \
