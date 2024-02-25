@@ -257,7 +257,8 @@
       "4b64fc8c-9eba-4f8a-a00f-d9100b4ea58e",
       "838672cb-e55a-4c83-83b8-2d9e28202739",
       "94789ef7-ad5c-4886-9354-ab1eaa77247c",
-      "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf"
+      "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
+      "b69e7b33-235b-4fae-932c-0c245c53228b"
     ]
   },
   {
@@ -358,7 +359,8 @@
       "756421b4-1ea7-4c94-a29b-d355207768cd",
       "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
       "9a84de29-0433-4680-8eab-c10f21b04242",
-      "38931fed-fcd6-4e07-b608-47b970de1c25"
+      "38931fed-fcd6-4e07-b608-47b970de1c25",
+      "b69e7b33-235b-4fae-932c-0c245c53228b"
     ]
   },
   {
@@ -819,6 +821,22 @@
     "pfp": "",
     "comics": [
       "38931fed-fcd6-4e07-b608-47b970de1c25"
+    ]
+  },
+  {
+    "name": "Captain",
+    "description": "A whaler.",
+    "pfp": "",
+    "comics": [
+      "b69e7b33-235b-4fae-932c-0c245c53228b"
+    ]
+  },
+  {
+    "name": "The Badger",
+    "description": "Captain's boat",
+    "pfp": "",
+    "comics": [
+      "b69e7b33-235b-4fae-932c-0c245c53228b"
     ]
   }
 ]
