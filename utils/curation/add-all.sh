@@ -7,7 +7,7 @@ if [ $# -eq 0 ]; then
 fi
 
 filename=$1
-command_to_run="./utils/add-comic.sh"
+command_to_run="python /utils/curation/add-comic.py"
 
 # Check if the file exists
 if [ ! -f "$filename" ]; then

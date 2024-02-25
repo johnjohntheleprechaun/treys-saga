@@ -1,10 +1,15 @@
 import subprocess
 import json
+import sys
 
 characters = json.load(open("characters.json"))
-
-comic_url = input("Comic url: ")
+if (len(sys.argv) < 2):
+    comic_url = input("Comic url: ")
+else:
+    comic_url = sys.argv[1]
 output = subprocess.run(["bash", "utils/curation/add-comic.sh", comic_url], capture_output=True)
+if ("already in list" in output.stdout.decode()):
+    quit()
 new_uuid = output.stdout.decode()[:-1]
 print(new_uuid)
 
