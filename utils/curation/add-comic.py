@@ -24,11 +24,14 @@ print(new_uuid)
 
 while True:
     # character associations
-    character = input("\nAdd character association (or [d] to finish): ")
-    if character in ["", "d"]:
+    character = input("\nAdd character association ([d] to finish [n] for new): ")
+    if character in ["d"]:
         if not took_input:
             print("\n")
         break
+    elif character == "n":
+        subprocess.run(["bash", "utils/curation/add-character.sh", new_uuid])
+        continue
     
     # search for existing characters
     matches = []
@@ -41,16 +44,17 @@ while True:
             if character.lower() in char["description"].lower():
                 matches.append(char)
     
-    if len(matches) == 0:
-        add = input("No matches found. Would you like to create one? (y/n) ")
-        continue
-    
     for i, match in enumerate(matches):
         print(f"""({i + 1})  {match["name"]} | {match["description"]}""")
-    print(f"""({len(matches) + 1})  --Cancel--\n""")
+    print(f"""({len(matches) + 1})  --Cancel--""")
+    print(f"""({len(matches) + 2})  --New--\n""")
+    
     index = input("Which character would you like to add? ")
-    print(index, len(matches))
+
     if int(index)-1 == len(matches):
+        continue
+    elif int(index)-1 == len(matches)+1:
+        subprocess.run(["bash", "utils/curation/add-character.sh"])
         continue
 
     char_name = matches[int(index)-1]["name"]

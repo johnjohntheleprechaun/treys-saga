@@ -1,14 +1,15 @@
 CURRENT=$(cat characters.json)
-
-while true; do
+if [ $# = 1 ]; then
+    COMIC="$1"
+fi
 read -p "Characters Name: " NAME
 read -p "Character Description: " DESCRIPTION
 
 NEWFILE=$(echo "$CURRENT" | jq \
     --arg name "$NAME" \
     --arg desc "$DESCRIPTION" \
-    '. + [{ name: $name, description: $desc, pfp: "", comics: [] }]'
+    --arg comic "$COMIC" \
+    '. + [{ name: $name, description: $desc, pfp: "", comics: [$comic] }]'
 )
 echo -E "$NEWFILE" > characters.json
 CURRENT=$NEWFILE
-done;
