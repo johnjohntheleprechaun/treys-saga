@@ -73,7 +73,8 @@
       "3da5cef6-6c02-4725-a7bf-93b84c9d30a9",
       "756421b4-1ea7-4c94-a29b-d355207768cd",
       "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
-      "9a84de29-0433-4680-8eab-c10f21b04242"
+      "9a84de29-0433-4680-8eab-c10f21b04242",
+      "38931fed-fcd6-4e07-b608-47b970de1c25"
     ]
   },
   {
@@ -135,7 +136,8 @@
       "94789ef7-ad5c-4886-9354-ab1eaa77247c",
       "3da5cef6-6c02-4725-a7bf-93b84c9d30a9",
       "756421b4-1ea7-4c94-a29b-d355207768cd",
-      "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf"
+      "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
+      "38931fed-fcd6-4e07-b608-47b970de1c25"
     ]
   },
   {
@@ -225,7 +227,8 @@
       "12367386-20e2-42bd-a150-fcced2b70ced",
       "3da5cef6-6c02-4725-a7bf-93b84c9d30a9",
       "756421b4-1ea7-4c94-a29b-d355207768cd",
-      "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf"
+      "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
+      "38931fed-fcd6-4e07-b608-47b970de1c25"
     ]
   },
   {
@@ -353,7 +356,8 @@
       "3da5cef6-6c02-4725-a7bf-93b84c9d30a9",
       "756421b4-1ea7-4c94-a29b-d355207768cd",
       "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
-      "9a84de29-0433-4680-8eab-c10f21b04242"
+      "9a84de29-0433-4680-8eab-c10f21b04242",
+      "38931fed-fcd6-4e07-b608-47b970de1c25"
     ]
   },
   {
@@ -729,7 +733,8 @@
       "838672cb-e55a-4c83-83b8-2d9e28202739",
       "3da5cef6-6c02-4725-a7bf-93b84c9d30a9",
       "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
-      "9a84de29-0433-4680-8eab-c10f21b04242"
+      "9a84de29-0433-4680-8eab-c10f21b04242",
+      "38931fed-fcd6-4e07-b608-47b970de1c25"
     ]
   },
   {
@@ -803,6 +808,14 @@
       "fbad0b79-07c3-4637-b169-9f49cfda529e",
       "12367386-20e2-42bd-a150-fcced2b70ced",
       "9a84de29-0433-4680-8eab-c10f21b04242"
+    ]
+  },
+  {
+    "name": "Travis",
+    "description": "A donor offspring of Trey",
+    "pfp": "",
+    "comics": [
+      "38931fed-fcd6-4e07-b608-47b970de1c25"
     ]
   }
 ]
