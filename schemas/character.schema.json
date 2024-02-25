@@ -1,0 +1,31 @@
+{
+    "$id": "https://trey.leprehaun.dev/characters.schema.json",
+    "type": "array",
+    "uniqueItems": true,
+    "items": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string",
+                "description": "The character's name."
+            },
+            "description": {
+                "type": "string",
+                "description": "The characters basic description. Avoid saying anything that could spoil the lore."
+            },
+            "pfp": {
+                "type": "string",
+                "format": "uri",
+                "description": "The filename of an image in `pfps/`."
+            },
+            "comics": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "uuid",
+                    "description": "This should link to a comics uuid from `comics.json`."
+                }
+            }
+        }
+    }
+}

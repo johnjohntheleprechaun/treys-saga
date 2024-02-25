@@ -1,0 +1,25 @@
+{
+    "$id": "https://trey.leprehaun.dev/comics.schema.json",
+
+    "type": "object",
+    "patternProperties": {
+        "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$": { 
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "The comics title."
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "The url of the source comic."
+                },
+                "embedCode": {
+                    "type": "string",
+                    "description": "The HTML code to be used to embed the comic."
+                }
+            }
+        }
+    }
+}
