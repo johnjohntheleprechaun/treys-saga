@@ -75,7 +75,11 @@
       "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
       "9a84de29-0433-4680-8eab-c10f21b04242",
       "38931fed-fcd6-4e07-b608-47b970de1c25",
-      "be79375a-612e-45fe-9bf6-efaab7d8c89c"
+      "be79375a-612e-45fe-9bf6-efaab7d8c89c",
+      "d5d6da39-aa67-4841-a649-0b2cd918eb6f",
+      "2e8864f5-d989-48a4-8a62-3693652f927b",
+      "0fbbe5ad-50cd-4650-9ed8-692bc5677b53",
+      "b7841740-eedc-4cfc-8a96-b82ca2b5a0bd"
     ]
   },
   {
@@ -138,7 +142,8 @@
       "3da5cef6-6c02-4725-a7bf-93b84c9d30a9",
       "756421b4-1ea7-4c94-a29b-d355207768cd",
       "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
-      "38931fed-fcd6-4e07-b608-47b970de1c25"
+      "38931fed-fcd6-4e07-b608-47b970de1c25",
+      "d5d6da39-aa67-4841-a649-0b2cd918eb6f"
     ]
   },
   {
@@ -174,7 +179,8 @@
       "c46a316e-170f-4109-a79c-0b936c9f7817",
       "36bf11ae-b5b5-4d06-a68a-9a55c671605e",
       "a3c9aa12-6dc8-4440-970b-6d6fedb1e711",
-      "396a5bd9-e345-4486-8342-c65a15f5bc5a"
+      "396a5bd9-e345-4486-8342-c65a15f5bc5a",
+      "b7841740-eedc-4cfc-8a96-b82ca2b5a0bd"
     ]
   },
   {
@@ -229,7 +235,9 @@
       "3da5cef6-6c02-4725-a7bf-93b84c9d30a9",
       "756421b4-1ea7-4c94-a29b-d355207768cd",
       "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
-      "38931fed-fcd6-4e07-b608-47b970de1c25"
+      "38931fed-fcd6-4e07-b608-47b970de1c25",
+      "2e8864f5-d989-48a4-8a62-3693652f927b",
+      "0fbbe5ad-50cd-4650-9ed8-692bc5677b53"
     ]
   },
   {
@@ -360,7 +368,10 @@
       "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
       "9a84de29-0433-4680-8eab-c10f21b04242",
       "38931fed-fcd6-4e07-b608-47b970de1c25",
-      "b69e7b33-235b-4fae-932c-0c245c53228b"
+      "b69e7b33-235b-4fae-932c-0c245c53228b",
+      "d5d6da39-aa67-4841-a649-0b2cd918eb6f",
+      "2a9f5d3a-ee58-4522-b4a2-d32bf3844031",
+      "0fbbe5ad-50cd-4650-9ed8-692bc5677b53"
     ]
   },
   {
@@ -405,7 +416,8 @@
       "a3c9aa12-6dc8-4440-970b-6d6fedb1e711",
       "396a5bd9-e345-4486-8342-c65a15f5bc5a",
       "4b64fc8c-9eba-4f8a-a00f-d9100b4ea58e",
-      "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf"
+      "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
+      "b7841740-eedc-4cfc-8a96-b82ca2b5a0bd"
     ]
   },
   {
@@ -473,7 +485,8 @@
       "29ff222e-a36b-4497-aff4-21ec885bccfe",
       "8429c8b9-774d-42a4-b827-fd233a7699f7",
       "a5725f7e-e9ac-4be4-b8bc-b805b6b3446d",
-      "36bf11ae-b5b5-4d06-a68a-9a55c671605e"
+      "36bf11ae-b5b5-4d06-a68a-9a55c671605e",
+      "2a9f5d3a-ee58-4522-b4a2-d32bf3844031"
     ]
   },
   {
@@ -739,7 +752,8 @@
       "3da5cef6-6c02-4725-a7bf-93b84c9d30a9",
       "aeefca35-4f7f-4d83-9b4d-b50a3d5cdbcf",
       "9a84de29-0433-4680-8eab-c10f21b04242",
-      "38931fed-fcd6-4e07-b608-47b970de1c25"
+      "38931fed-fcd6-4e07-b608-47b970de1c25",
+      "0fbbe5ad-50cd-4650-9ed8-692bc5677b53"
     ]
   },
   {
@@ -837,6 +851,62 @@
     "pfp": "",
     "comics": [
       "b69e7b33-235b-4fae-932c-0c245c53228b"
+    ]
+  },
+  {
+    "name": "Tristan",
+    "description": "A rich stock image that envies the simple life",
+    "pfp": "",
+    "comics": [
+      "d5d6da39-aa67-4841-a649-0b2cd918eb6f"
+    ]
+  },
+  {
+    "name": "Tray 2",
+    "description": "A tray of cupcakes",
+    "pfp": "",
+    "comics": [
+      ""
+    ]
+  },
+  {
+    "name": "Pussy-ass Diver",
+    "description": "It's almost like he has self preservation instincts",
+    "pfp": "",
+    "comics": [
+      "0fbbe5ad-50cd-4650-9ed8-692bc5677b53"
+    ]
+  },
+  {
+    "name": "Cool Diver",
+    "description": "A very cool diver. He doesn't have any self preservation instincts",
+    "pfp": "",
+    "comics": [
+      "0fbbe5ad-50cd-4650-9ed8-692bc5677b53"
+    ]
+  },
+  {
+    "name": "Dave Contra",
+    "description": "The creator of the original Trey comic",
+    "pfp": "",
+    "comics": [
+      "b7841740-eedc-4cfc-8a96-b82ca2b5a0bd"
+    ]
+  },
+  {
+    "name": "Trey (TV Host)",
+    "description": "A TV host. Not the og Trey.",
+    "pfp": "",
+    "comics": [
+      "b7841740-eedc-4cfc-8a96-b82ca2b5a0bd"
+    ]
+  },
+  {
+    "name": "u/fyxr",
+    "description": "The original curator of Trey comics. He is **not** u/Johnny_Thunder314, who is me, the guy who created this site and made the character list.",
+    "pfp": "",
+    "comics": [
+      "b7841740-eedc-4cfc-8a96-b82ca2b5a0bd"
     ]
   }
 ]
