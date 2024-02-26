@@ -165,17 +165,13 @@ class ComicNode extends DisplayNode {
         this.embedElement.moveTo(0, 0);
 
         const exit = document.createElement("div");
+        exit.classList.add("embed-exit");
         exit.innerText = "EXIT";
-        exit.style.color = "white";
-        exit.style.display = "block";
         exit.addEventListener("click", e => {
             e.stopPropagation();
             this.unfocusNode();
         });
         this.embedElement.appendChild(exit);
-        exit.style.top = "10px";
-        exit.style.left = "10px";
-        exit.style.position = "absolute";
 
         this.style.borderRadius = "0px";
         this.style.width = "100%";
