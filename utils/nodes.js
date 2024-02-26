@@ -145,16 +145,6 @@ class ComicNode extends DisplayNode {
         this.pfp = document.createElement("img");
         this.pfp.src = "https://placekitten.com/400/400";
         this.appendChild(this.pfp);
-        // exit button
-        this.exit = new MovableDiv();
-        this.exit.innerText = "EXIT";
-        this.exit.style.color = "white";
-        this.exit.style.zIndex = "-1"; // a temporary solution
-        this.exit.addEventListener("click", e => {
-            e.stopPropagation();
-            this.unfocusNode();
-        })
-        this.appendChild(this.exit);
     }
     /**
      * Open the embedded reddit post
@@ -169,13 +159,23 @@ class ComicNode extends DisplayNode {
         }
         displayedComic = this;
         this.pfp.style.display = "none"; // hide pfp
-        this.exit.style.display = "block";
-        this.exit.setPos(20, 20, true);
-        console.log(this.exit.targetPos);
 
         this.embedElement = createUsableEmbed(comicDB[this.uuid].embedCode);
-        this.appendChild(this.embedElement);
+        document.body.appendChild(this.embedElement);
         this.embedElement.moveTo(0, 0);
+
+        const exit = document.createElement("div");
+        exit.innerText = "EXIT";
+        exit.style.color = "white";
+        exit.style.display = "block";
+        exit.addEventListener("click", e => {
+            e.stopPropagation();
+            this.unfocusNode();
+        });
+        this.embedElement.appendChild(exit);
+        exit.style.top = "10px";
+        exit.style.left = "10px";
+        exit.style.position = "absolute";
 
         this.style.borderRadius = "0px";
         this.style.width = "100%";

@@ -23,6 +23,14 @@
     border: 5px solid green;
     overflow: hidden;
 }
+.embed-container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 img {
     width: 100%;
     height: 100%;

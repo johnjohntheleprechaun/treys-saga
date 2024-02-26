@@ -139,7 +139,7 @@ function populateLevels(nodes, skipFirst=false, levelCounts = [1, 6], levelIncre
  */
 function createUsableEmbed(htmlContent) {
     const baseDiv = new MovableDiv();
-    baseDiv.classList.add("test");
+    baseDiv.classList.add("embed-container");
     baseDiv.innerHTML = htmlContent;
     // copy script properties
     const scriptChild = baseDiv.querySelector("script");
@@ -152,6 +152,7 @@ function createUsableEmbed(htmlContent) {
     quoteChild.setAttribute("data-embed-theme", "dark");
     scriptChild.remove();
     baseDiv.appendChild(script);
+    baseDiv.style.zIndex = 1;
     return baseDiv;
 }
 
