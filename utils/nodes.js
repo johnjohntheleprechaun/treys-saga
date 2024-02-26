@@ -143,6 +143,10 @@ class ComicNode extends DisplayNode {
      * Open the embedded reddit post
      */
     focusNode() {
+        if (displayedComic === this) {
+            console.log("focus");
+            return;
+        }
         if (displayedComic) {
             displayedComic.unfocusNode();
         }
