@@ -155,12 +155,13 @@ class ComicNode extends DisplayNode {
 
         this.embedElement = createUsableEmbed(comicDB[this.uuid].embedCode);
         this.appendChild(this.embedElement);
-        
-        this.style.width = "500px";
-        this.style.height = "fit-content";
-        this.style.borderRadius = "20px";
+        this.embedElement.moveTo(0, 0);
+
+        this.style.borderRadius = "0px";
+        this.style.width = "100%";
+        this.style.height = "100%";
         this.style.zIndex = "1";
-        //this.moveTo(0, 0);
+        this.moveTo(0, 0);
     }
     /**
      * Close the embedded reddit post
