@@ -18,16 +18,13 @@ let displayedComic;
 /**
  * This is the base node class, it contains functions like focusing, movement, etc.
  */
-class DisplayNode extends HTMLDivElement {
+class MovableDiv extends HTMLDivElement {
     constructor () {
         super();
-        this.classList.add("comic-node");
-        this.addEventListener("click", this.toggleFocus);
         this.targetPos = [0,0];
-        this.offset = [0, 0];
+        this.offset = [0,0];
         resizeObserver.observe(this);
     }
-
     /**
      * Move a node to a position. Will later contain the animation code.
      * @param {number} x the x position, in pixels
@@ -40,15 +37,22 @@ class DisplayNode extends HTMLDivElement {
      * Set a nodes absolute position. No animation.
      * @param {number} x the x position, in pixels
      * @param {number} y the y position, in pixels
+     * @param {boolean} absolute Whether to position abosulute, or centered in the parent
      */
-    setPos(x, y) {
+    setPos(x, y, absolute) {
+        this.targetPos = [x, y, absolute];
+        if (absolute) {
+            this.style.left = `${x}px`;
+            this.style.top = `${y}px`;
+            return;
+        }
         const bounds = this.parentElement.getBoundingClientRect();
         this.style.position = "absolute";
         const newX = x + (bounds.width / scale / 2) - (this.offsetWidth / 2);
         const newY = y + (bounds.height / scale / 2) - (this.offsetHeight / 2);
         this.style.left = `${newX}px`;
         this.style.top = `${newY}px`;
-        this.targetPos = [x, y];
+        this.targetPos = [x, y, absolute];
     }
     /**
      * Set the nodes display offset. The absolute position will not change.
@@ -67,6 +71,14 @@ class DisplayNode extends HTMLDivElement {
             (this.targetPos[0] + this.offset[0] / scale),
             (this.targetPos[1] + this.offset[1] / scale)
         );
+    }
+}
+customElements.define("movable-div", MovableDiv, { extends: "div" });
+class DisplayNode extends MovableDiv {
+    constructor () {
+        super();
+        this.classList.add("comic-node");
+        this.addEventListener("click", this.toggleFocus);
     }
     /**
      * Toggle whether the node is focused or not.
@@ -116,7 +128,7 @@ class DisplayNode extends HTMLDivElement {
         this.style.filter = "";
     }
 }
-customElements.define("comic-node", DisplayNode, { extends: "div" });
+customElements.define("display-node", DisplayNode, { extends: "div" });
 /**
  * A comic. When focused it will open the embedded reddit post
  */
@@ -130,28 +142,47 @@ class ComicNode extends DisplayNode {
         this.uuid = uuid;
         this.classList.add("comic");
         // placeholder pfp
-        const image = document.createElement("img");
-        image.src = "https://placekitten.com/400/400";
-        this.appendChild(image);
+        this.pfp = document.createElement("img");
+        this.pfp.src = "https://placekitten.com/400/400";
+        this.appendChild(this.pfp);
     }
     /**
      * Open the embedded reddit post
      */
     focusNode() {
+        if (displayedComic === this) {
+            console.log("focus");
+            return;
+        }
         if (displayedComic) {
             displayedComic.unfocusNode();
         }
         displayedComic = this;
-        this.children.item(0).style.display = "none"; // hide pfp
+        this.pfp.style.display = "none"; // hide pfp
 
         this.embedElement = createUsableEmbed(comicDB[this.uuid].embedCode);
-        this.appendChild(this.embedElement);
-        
-        this.style.width = "500px";
-        this.style.height = "fit-content";
-        this.style.borderRadius = "20px";
+        document.body.appendChild(this.embedElement);
+        this.embedElement.moveTo(0, 0);
+
+        const exit = document.createElement("div");
+        exit.innerText = "EXIT";
+        exit.style.color = "white";
+        exit.style.display = "block";
+        exit.addEventListener("click", e => {
+            e.stopPropagation();
+            this.unfocusNode();
+        });
+        this.embedElement.appendChild(exit);
+        exit.style.top = "10px";
+        exit.style.left = "10px";
+        exit.style.position = "absolute";
+
+        this.style.borderRadius = "0px";
+        this.style.width = "100%";
+        this.style.height = "100%";
         this.style.zIndex = "1";
-        //this.moveTo(0, 0);
+        this.unfocusedPos = this.targetPos;
+        this.moveTo(0, 0);
     }
     /**
      * Close the embedded reddit post
@@ -160,15 +191,17 @@ class ComicNode extends DisplayNode {
         if (!this.embedElement) {
             return;
         }
+        displayedComic = undefined;
         this.embedElement.style.display = "none";
-        this.children.item(0).style.display = "block";
+        this.pfp.style.display = "block";
         this.style.width = "80px";
         this.style.height = "80px";
         this.style.zIndex = "0";
         this.style.borderRadius = "100%";
+        this.moveTo(this.unfocusedPos[0], this.unfocusedPos[1]);
     }
 }
-customElements.define("comic-element", ComicNode, { extends: "div" });
+customElements.define("comic-node", ComicNode, { extends: "div" });
 
 /**
  * A character Node. When focused it will display all of it's related comic nodes.
@@ -211,13 +244,13 @@ class CharacterNode extends DisplayNode {
             this.comicElements.push(comicElement);
         }
         // position comics
-        displayCircle(this.comicElements, 150, this);
+        const levels = populateLevels(this.comicElements, true);
+        displayLevels(levels, 150, this);
     }
     /**
      * Remove the comic nodes spawned by this node
      */
     unfocusNode() {
-        super.unfocusNode();
         this.undim();
         if (!this.comicElements) {
             return; // wasn't displaying comic nodes
@@ -226,6 +259,14 @@ class CharacterNode extends DisplayNode {
             resizeObserver.unobserve(comic);
             comic.remove();
         }
+        if (focused === this) {
+            for (const character of getAllCharacters()) {
+                if (character !== this) {
+                    character.unfocusNode();
+                }
+            }
+        }
+        super.unfocusNode();
     }
 }
-customElements.define("character-element", CharacterNode, { extends: "div" });
+customElements.define("character-node", CharacterNode, { extends: "div" });

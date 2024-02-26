@@ -10,18 +10,15 @@ let comicDB;
 let characterDB;
 let levels = [];
 
-
 window.addEventListener("load", async () => {
     const characters = await populate();
+    nodeContainer = document.getElementById("node-container");
     
     for (const character of characters) {
-        document.body.appendChild(character);
+        nodeContainer.appendChild(character);
     }
     levels = populateLevels(characters);
-    for (let i = 0; i < levels.length; i++) {
-        const level = levels[i];
-        displayCircle(level, 125*(i))
-    }
+    displayLevels(levels);
 });
 
 async function populate() {
