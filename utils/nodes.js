@@ -166,7 +166,8 @@ class ComicNode extends DisplayNode {
 
         const exit = document.createElement("div");
         exit.classList.add("embed-exit");
-        exit.innerText = "EXIT";
+        exit.classList.add("material-symbols-rounded");
+        exit.innerText = "close";
         exit.addEventListener("click", e => {
             e.stopPropagation();
             this.unfocusNode();

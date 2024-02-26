@@ -16,7 +16,7 @@ window.addEventListener("mousemove", event => {
         event.target.id === "node-container" ||
         (mouseButton === 1 && event.target.classList && !event.target.classList.contains("embed-container") && event.target.nodeName !== "IFRAME")
     ) {
-        console.log(event.target);
+        //console.log(event.target);
         setOffset(offsetX + event.movementX, offsetY + event.movementY);
     }
 });
