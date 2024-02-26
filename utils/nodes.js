@@ -18,16 +18,13 @@ let displayedComic;
 /**
  * This is the base node class, it contains functions like focusing, movement, etc.
  */
-class DisplayNode extends HTMLDivElement {
+class MovableDiv extends HTMLDivElement {
     constructor () {
         super();
-        this.classList.add("comic-node");
-        this.addEventListener("click", this.toggleFocus);
         this.targetPos = [0,0];
-        this.offset = [0, 0];
+        this.offset = [0,0];
         resizeObserver.observe(this);
     }
-
     /**
      * Move a node to a position. Will later contain the animation code.
      * @param {number} x the x position, in pixels
@@ -67,6 +64,14 @@ class DisplayNode extends HTMLDivElement {
             (this.targetPos[0] + this.offset[0] / scale),
             (this.targetPos[1] + this.offset[1] / scale)
         );
+    }
+}
+customElements.define("movable-div", MovableDiv, { extends: "div" });
+class DisplayNode extends MovableDiv {
+    constructor () {
+        super();
+        this.classList.add("comic-node");
+        this.addEventListener("click", this.toggleFocus);
     }
     /**
      * Toggle whether the node is focused or not.
@@ -116,7 +121,7 @@ class DisplayNode extends HTMLDivElement {
         this.style.filter = "";
     }
 }
-customElements.define("comic-node", DisplayNode, { extends: "div" });
+customElements.define("display-node", DisplayNode, { extends: "div" });
 /**
  * A comic. When focused it will open the embedded reddit post
  */
@@ -168,7 +173,7 @@ class ComicNode extends DisplayNode {
         this.style.borderRadius = "100%";
     }
 }
-customElements.define("comic-element", ComicNode, { extends: "div" });
+customElements.define("comic-node", ComicNode, { extends: "div" });
 
 /**
  * A character Node. When focused it will display all of it's related comic nodes.
@@ -229,4 +234,4 @@ class CharacterNode extends DisplayNode {
         }
     }
 }
-customElements.define("character-element", CharacterNode, { extends: "div" });
+customElements.define("character-node", CharacterNode, { extends: "div" });

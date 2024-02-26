@@ -131,10 +131,10 @@ function populateLevels(nodes, skipFirst=false, levelCounts = [1, 6], levelIncre
 /**
  * Create an element with an actually usable script. This is neccessary because scripts inserted with either innerHTML or cloneNode will not be executed. security bs... smh
  * @param {string} htmlContent 
- * @returns {HTMLDivElement}
+ * @returns {MovableDiv}
  */
 function createUsableEmbed(htmlContent) {
-    const baseDiv = document.createElement("div");
+    const baseDiv = new MovableDiv();
     baseDiv.classList.add("test");
     baseDiv.innerHTML = htmlContent;
     // copy script properties
