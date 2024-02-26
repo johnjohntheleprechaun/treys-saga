@@ -251,7 +251,6 @@ class CharacterNode extends DisplayNode {
      * Remove the comic nodes spawned by this node
      */
     unfocusNode() {
-        super.unfocusNode();
         this.undim();
         if (!this.comicElements) {
             return; // wasn't displaying comic nodes
@@ -260,6 +259,14 @@ class CharacterNode extends DisplayNode {
             resizeObserver.unobserve(comic);
             comic.remove();
         }
+        if (focused === this) {
+            for (const character of getAllCharacters()) {
+                if (character !== this) {
+                    character.unfocusNode();
+                }
+            }
+        }
+        super.unfocusNode();
     }
 }
 customElements.define("character-node", CharacterNode, { extends: "div" });
