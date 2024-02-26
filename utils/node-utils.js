@@ -33,7 +33,7 @@ function* getAllCharacters() {
 }
 
 function* getAllNodes() {
-    for (const element of document.body.children) {
+    for (const element of nodeContainer.children) {
         if (element instanceof DisplayNode) {
             yield element;
         }
