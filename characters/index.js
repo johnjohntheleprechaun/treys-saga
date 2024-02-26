@@ -10,12 +10,12 @@ let comicDB;
 let characterDB;
 let levels = [];
 
-
 window.addEventListener("load", async () => {
     const characters = await populate();
+    nodeContainer = document.getElementById("node-container");
     
     for (const character of characters) {
-        document.body.appendChild(character);
+        nodeContainer.appendChild(character);
     }
     levels = populateLevels(characters);
     displayLevels(levels);

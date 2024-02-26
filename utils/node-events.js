@@ -1,7 +1,8 @@
 let mouseButton = -1;
 
 window.addEventListener("click", event => {
-    if (event.target === document.body || event.target === document.documentElement) {
+    if (event.target === document.body || event.target === document.documentElement || event.target.id === "node-container") {
+        console.log(event.target.id);
         unfocusAll();
     }
 });
@@ -9,7 +10,7 @@ window.addEventListener("mousemove", event => {
     if (mouseButton === -1) {
         return;
     }
-    if (event.target === document.body || event.target === document.documentElement || mouseButton === 1) {
+    if (event.target === document.body || event.target === document.documentElement || event.target.id === "node-container" || mouseButton === 1) {
         setOffset(offsetX + event.movementX, offsetY + event.movementY);
     }
 });

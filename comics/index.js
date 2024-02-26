@@ -8,10 +8,11 @@ window.addEventListener("load", async () => {
 
 async function loadComics() {
     comicDB = await fetch("/comics.json").then(a=>a.json());
+    nodeContainer = document.getElementById("node-container");
     for (const key in comicDB) {
         const comic = new ComicNode(key);
-        comics.push(comic)
-        document.body.appendChild(comic);
+        comics.push(comic);
+        nodeContainer.appendChild(comic);
     }
     const levels = populateLevels(comics);
     displayLevels(levels);

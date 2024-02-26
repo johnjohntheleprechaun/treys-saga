@@ -6,6 +6,10 @@ const minScale = .05
 let scale = 1;
 let offsetX = 0;
 let offsetY = 0;
+/**
+ * @type {HTMLDivElement}
+ */
+let nodeContainer;
 
 /**
  * The callback for the ResizeObserver. Adjusts the node sizes of all the elements. Probably shouldn't use this anywhere else, but techincally you could
@@ -21,7 +25,7 @@ function adjustElementPositions(entries) {
  * List all of the existing character nodes
  */
 function* getAllCharacters() {
-    for (const element of document.body.children) {
+    for (const element of nodeContainer.children) {
         if (element instanceof CharacterNode) {
             yield element;
         }
@@ -52,7 +56,7 @@ function unfocusAll() {
 function setScale(newScale) {
     let targetScale = Math.max(newScale, minScale);
     // scale is set with styles so that the comic embed elements will also scale properly
-    document.body.style.transform = `scale(${targetScale})`;
+    nodeContainer.style.transform = `scale(${targetScale})`;
     scale = targetScale;
 }
 
@@ -62,7 +66,7 @@ function setScale(newScale) {
  * @param {number} y 
  */
 function setOffset(x, y) {
-    for (const element of document.body.children) {
+    for (const element of nodeContainer.children) {
         if (element instanceof DisplayNode) {
             element.setOffset(x, y);
         }
