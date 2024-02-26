@@ -37,15 +37,22 @@ class MovableDiv extends HTMLDivElement {
      * Set a nodes absolute position. No animation.
      * @param {number} x the x position, in pixels
      * @param {number} y the y position, in pixels
+     * @param {boolean} absolute Whether to position abosulute, or centered in the parent
      */
-    setPos(x, y) {
+    setPos(x, y, absolute) {
+        this.targetPos = [x, y, absolute];
+        if (absolute) {
+            this.style.left = `${x}px`;
+            this.style.top = `${y}px`;
+            return;
+        }
         const bounds = this.parentElement.getBoundingClientRect();
         this.style.position = "absolute";
         const newX = x + (bounds.width / scale / 2) - (this.offsetWidth / 2);
         const newY = y + (bounds.height / scale / 2) - (this.offsetHeight / 2);
         this.style.left = `${newX}px`;
         this.style.top = `${newY}px`;
-        this.targetPos = [x, y];
+        this.targetPos = [x, y, absolute];
     }
     /**
      * Set the nodes display offset. The absolute position will not change.
@@ -135,9 +142,19 @@ class ComicNode extends DisplayNode {
         this.uuid = uuid;
         this.classList.add("comic");
         // placeholder pfp
-        const image = document.createElement("img");
-        image.src = "https://placekitten.com/400/400";
-        this.appendChild(image);
+        this.pfp = document.createElement("img");
+        this.pfp.src = "https://placekitten.com/400/400";
+        this.appendChild(this.pfp);
+        // exit button
+        this.exit = new MovableDiv();
+        this.exit.innerText = "EXIT";
+        this.exit.style.color = "white";
+        this.exit.style.zIndex = "-1"; // a temporary solution
+        this.exit.addEventListener("click", e => {
+            e.stopPropagation();
+            this.unfocusNode();
+        })
+        this.appendChild(this.exit);
     }
     /**
      * Open the embedded reddit post
@@ -151,7 +168,10 @@ class ComicNode extends DisplayNode {
             displayedComic.unfocusNode();
         }
         displayedComic = this;
-        this.children.item(0).style.display = "none"; // hide pfp
+        this.pfp.style.display = "none"; // hide pfp
+        this.exit.style.display = "block";
+        this.exit.setPos(20, 20, true);
+        console.log(this.exit.targetPos);
 
         this.embedElement = createUsableEmbed(comicDB[this.uuid].embedCode);
         this.appendChild(this.embedElement);
@@ -161,6 +181,7 @@ class ComicNode extends DisplayNode {
         this.style.width = "100%";
         this.style.height = "100%";
         this.style.zIndex = "1";
+        this.unfocusedPos = this.targetPos;
         this.moveTo(0, 0);
     }
     /**
@@ -170,12 +191,14 @@ class ComicNode extends DisplayNode {
         if (!this.embedElement) {
             return;
         }
+        displayedComic = undefined;
         this.embedElement.style.display = "none";
-        this.children.item(0).style.display = "block";
+        this.pfp.style.display = "block";
         this.style.width = "80px";
         this.style.height = "80px";
         this.style.zIndex = "0";
         this.style.borderRadius = "100%";
+        this.moveTo(this.unfocusedPos[0], this.unfocusedPos[1]);
     }
 }
 customElements.define("comic-node", ComicNode, { extends: "div" });
