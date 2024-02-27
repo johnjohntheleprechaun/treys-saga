@@ -11,19 +11,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
+}
+.content-wrapper p {
+    width: 50%;
+    font-size: 20px;
 }
 #introduction {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    height: 100vh;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 #introduction img {
     width: 400px;
     height: 400px;
     border-radius: 25px;
+}
+#introduction .subtitle {
+    width: 800px;
 }
 .title {
     font-size: 125px;
@@ -32,7 +41,11 @@ body {
     font-weight: 900;
 }
 .subtitle {
-    font-size: 60px;
+    font-size: 50px;
     font-family: "Comic Neue";
     color: var(--secondary);
+    text-wrap: balance;
+}
+a {
+    color: inherit;
 }
