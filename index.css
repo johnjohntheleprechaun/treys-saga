@@ -5,6 +5,7 @@ html, body {
 body {
     background-color: var(--background);
     color: var(--text);
+    font-family: "Courier New";
 }
 .content-wrapper {
     display: flex;
@@ -28,7 +29,6 @@ body {
 }
 .title {
     font-size: 125px;
-    font-family: "Courier New";
     text-transform: uppercase;
     font-weight: 900;
     width: fit-content;
@@ -41,12 +41,10 @@ body {
 }
 .pretitle {
     font-size: 30px;
-    font-family: "Courier New";
     color: var(--primary);
 }
 .subtitle {
     font-size: 30px;
-    font-family: "Courier New";
     color: var(--secondary);
     text-wrap: balance;
 }
@@ -84,5 +82,4 @@ a {
 #description {
     width: 60%;
     font-size: 20px;
-    font-family: 'Courier New';
 }
