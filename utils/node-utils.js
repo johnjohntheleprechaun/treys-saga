@@ -77,10 +77,11 @@ function setOffset(x, y) {
  * Display the nodes evenly in a circle. Optionally around a center node.
  * @param {DisplayNode[]} nodes a list of nodes to set positions for
  * @param {number} radius the radius
- * @param {DisplayNode}
+ * @param {number} targetCount how many nodes were supposed to be in the circle
+ * @param {DisplayNode} center the center of the circle
  */
-function displayCircle(nodes, radius, center = undefined) {
-    const spacing = (2 * Math.PI) / nodes.length;
+function displayCircle(nodes, radius, targetCount, center = undefined) {
+    const spacing = (2 * Math.PI) / targetCount;
     const offsetX = center ? center.targetPos[0] : 0;
     const offsetY = center ? center.targetPos[1] : 0;
 
@@ -103,7 +104,7 @@ function displayCircle(nodes, radius, center = undefined) {
 function displayLevels(levels, radiusIncrement=125, center=undefined) {
     let i = 0;
     for (const level of levels) {
-        displayCircle(level, radiusIncrement * i, center);
+        displayCircle(level, radiusIncrement * i, level.length, center);
         i++;
     }
 }
