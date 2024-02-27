@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Roboto";
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    width: 100%;
+}
+#introduction {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 50px 100px;
+    width: min(100%, 1400px);
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#introduction img {
+    width: min(400px, 90vw);
+    height: min(400px, 90vw);
+    border-radius: 25px;
+}
+.title {
+    font-size: 125px;
+    text-transform: uppercase;
+    font-weight: 900;
+    width: fit-content;
+}
+.text-gradient {
+    background: linear-gradient(170deg, var(--primary), var(--secondary));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.pretitle {
+    font-size: 30px;
+    color: var(--primary);
+}
+.subtitle {
+    font-size: 30px;
+    color: var(--secondary);
+    text-wrap: balance;
+}
+a {
+    color: inherit;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 30px;
+    color: var(--secondary);
+    margin-bottom: 50px;
+    text-align: center;
+}
+.link-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.link-container a {
+    background-color: var(--primary);
+    color: var(--background);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#description {
+    width: min(1000px, 90%);
+    font-size: 20px;
+}

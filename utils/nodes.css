@@ -1,3 +1,6 @@
+body {
+    overflow: hidden;
+}
 #node-container {
     position: absolute;
     display: block;
@@ -14,14 +17,18 @@
     position: absolute;
     border-radius: 100%;
     overflow: hidden;
-    border: 5px solid red;
+    border: 5px solid white;
     background-color: black;
     user-select: none;
     cursor: pointer;
 }
+.character {
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
 .comic {
-    border: 5px solid green;
-    overflow: hidden;
+    border-color: var(--secondary);
+    background-color: var(--secondary);
 }
 .embed-container {
     width: 100%;
@@ -30,6 +37,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.embed-exit {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    background-color: black;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 100%;
+
+    font-variation-settings: "GRAD" 200;
+    font-size: 30px !important;
 }
 img {
     width: 100%;

@@ -165,17 +165,14 @@ class ComicNode extends DisplayNode {
         this.embedElement.moveTo(0, 0);
 
         const exit = document.createElement("div");
-        exit.innerText = "EXIT";
-        exit.style.color = "white";
-        exit.style.display = "block";
+        exit.classList.add("embed-exit");
+        exit.classList.add("material-symbols-rounded");
+        exit.innerText = "close";
         exit.addEventListener("click", e => {
             e.stopPropagation();
             this.unfocusNode();
         });
         this.embedElement.appendChild(exit);
-        exit.style.top = "10px";
-        exit.style.left = "10px";
-        exit.style.position = "absolute";
 
         this.style.borderRadius = "0px";
         this.style.width = "100%";
@@ -213,6 +210,7 @@ class CharacterNode extends DisplayNode {
      */
     constructor (pfp, comics) {
         super();
+        this.classList.add("character");
         const pfpElement = document.createElement("img");
         this.comics = comics;
         pfpElement.src = pfp !== "" ? "/pfps/" + pfp : "https://placekitten.com/200/200";

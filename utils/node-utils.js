@@ -77,10 +77,11 @@ function setOffset(x, y) {
  * Display the nodes evenly in a circle. Optionally around a center node.
  * @param {DisplayNode[]} nodes a list of nodes to set positions for
  * @param {number} radius the radius
- * @param {DisplayNode}
+ * @param {number} targetCount how many nodes were supposed to be in the circle
+ * @param {DisplayNode} center the center of the circle
  */
-function displayCircle(nodes, radius, center = undefined) {
-    const spacing = (2 * Math.PI) / nodes.length;
+function displayCircle(nodes, radius, targetCount, center = undefined) {
+    const spacing = (2 * Math.PI) / targetCount;
     const offsetX = center ? center.targetPos[0] : 0;
     const offsetY = center ? center.targetPos[1] : 0;
 
@@ -103,7 +104,7 @@ function displayCircle(nodes, radius, center = undefined) {
 function displayLevels(levels, radiusIncrement=125, center=undefined) {
     let i = 0;
     for (const level of levels) {
-        displayCircle(level, radiusIncrement * i, center);
+        displayCircle(level[1], radiusIncrement * i, level[1].length, center);
         i++;
     }
 }
@@ -111,21 +112,16 @@ function displayLevels(levels, radiusIncrement=125, center=undefined) {
 /**
  * populates levels based on params like increase per level
  */
-function populateLevels(nodes, skipFirst=false, levelCounts = [1, 6], levelIncrement = 6) {
+function populateLevels(nodes, skipFirst=false, levelIncrement = 6) {
     let i = skipFirst ? 0 : 1; // current character being placed
-    const levels = skipFirst ? [[]] : [[nodes[0]]];
+    const levels = skipFirst ? [] : [[1, [nodes[0]]]];
     while (i < nodes.length) {
-        levels.push([]);
         // get current level count
-        let levelCount;
-        if (levels.length > levelCounts.length) {
-            levelCount = levelCounts[levelCounts.length - 1] + levelIncrement * (levels.length - levelCounts.length);
-        } else {
-            levelCount = levelCounts[levels.length-1];
-        }
+        let levelCount = levelIncrement * (levels.length);
+        levels.push([levelCount, []]);
         // add as many as can fit
         for (let j = 0; j < levelCount && i + j < nodes.length; j++) {
-            levels[levels.length-1].push(nodes[i + j]);
+            levels[levels.length-1][1].push(nodes[i + j]);
         }
         i += levelCount;
     }
