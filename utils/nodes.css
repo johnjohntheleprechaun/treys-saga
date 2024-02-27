@@ -14,14 +14,18 @@
     position: absolute;
     border-radius: 100%;
     overflow: hidden;
-    border: 5px solid red;
+    border: 5px solid white;
     background-color: black;
     user-select: none;
     cursor: pointer;
 }
+.character {
+    border-color: var(--primary);
+    background-color: var(--primary);
+}
 .comic {
-    border: 5px solid green;
-    overflow: hidden;
+    border-color: var(--secondary);
+    background-color: var(--secondary);
 }
 .embed-container {
     width: 100%;

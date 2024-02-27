@@ -210,6 +210,7 @@ class CharacterNode extends DisplayNode {
      */
     constructor (pfp, comics) {
         super();
+        this.classList.add("character");
         const pfpElement = document.createElement("img");
         this.comics = comics;
         pfpElement.src = pfp !== "" ? "/pfps/" + pfp : "https://placekitten.com/200/200";
